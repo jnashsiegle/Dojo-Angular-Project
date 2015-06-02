@@ -3,22 +3,32 @@
 <head>
 	<title>FWF - Grocery List</title>
 	
-	<script src = "lib/angular/angular.min.js"></script>
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src = "js/app.js"></script>
 
-
 </head>
-<body ng-app = "myApp">
+<body>
 
 	<!-- First section of content -->
+    <section ng-app = "myApp">
 	
         <div ng-controller = "MyController">
             <h1>Hello {{ myName}}!</h1>
 
             <p>2 + 5 = {{ 2+5 }}</p>
-            <input type = "text" ng-model = "name">
+            <label for = "name" >Name: </label><input type = "text" id = "name" ng-model = "name">
             <h2>Welcome {{ name }}</h2>
          </div>
+        </section>
+
+    <section id = "anotherApp">
+
+        <div ng-controller = "AuthorController">
+            <h1>{{ author.aname }}</h1>
+            <p>{{ author.title + ',' + " " + author.company }}</p>
+        </div>
+        </section>
 	
 
     
