@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="06920127-3e71-4910-85f2-6dc937c2dcad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project1/js/app.js" afterPath="$PROJECT_DIR$/Nash_Jana_Project1/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FWF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Nash_Jana_Project1/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71506107">
-              <caret line="41" column="1" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.20624152">
+              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -392,8 +391,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Nash_Jana_Project1/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71506107">
-          <caret line="41" column="1" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.20624152">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding />
         </state>
       </provider>

@@ -14,7 +14,7 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
 
         //Add List Item
         $scope.addItem = function() {
-            var found = $scope.groceries.indexOf($scope.newItem);
+            var found = $scope.groceries.indexOf(newItem);
             console.log(found);
 
 
