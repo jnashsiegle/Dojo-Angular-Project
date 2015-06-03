@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">         <!--calls the myApp -->
+<head>
+	<title>FWF - Grocery List</title>
+	
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src = "lib/angular/angular.min.js"></script>
+    <script src = "js/app_copy.js"></script>
+
+</head>
+<body>
+
+	<!-- Grocery List App -->
+    <section ng-controller = "MyController">   <!--initiates the ng-controller call -->
+        <h2>My Grocery List</h2>
+            <form ng-submit = "addItem()">      <!--submit function to add groceries -->
+                <input type = "text" ng-model = "newItem" placeholder = "Add Grocery Item" />
+
+                <div ng-repeat = "newItem in items"> <!--test -->
+                    {{ newItem }}
+                </div>
+
+                <button type = "submit">Save</button>
+            </form>
+
+        <p>{{ newItem }}</p>   <!--displays newItem below the input box -->
+        <article>
+            <h4>Items {{ groceries.length }}</h4>   <!--shows the quantity of items in array -->
+        <table>                                        <!--lays out grocery list -->
+            <tr ng-repeat = "item in groceries">  <!--table row for displaying item with class of ng-scope -->
+                <td> {{ item }}</td>                <!--table cell displaying actual item with class of ng-binding -->
+                <td>
+                    <button ng-click = "removeItem(item)">&times;</button>  <!--adds remove button -->
+                </td>
+            </tr>
+        </table>
+        </article>
+        </section>
+</body>
+</html>
