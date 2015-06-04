@@ -32,23 +32,5 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
                 var index = $scope.groceries.indexOf(item);   //create index var to pinpoint where to change array
                 //Code to be added here for validation
                 $scope.groceries.splice(index, 1);         //removes item referred to in index and loads array back in
-            }
-
-
-
-
-
-});
-
-function empty(e)         //creates function of empty
-{
-    var x;              //var x to be used pulling the addGrocery id and comparing it to "" (null)
-    x = document.getElementById("addGrocery").value;
-    if (x === "")           //if user hits save with nothing entered in field an alert will pop up
-    {
-        alert("Please enter a grocery item!");      //alert to tell them to enter their grocery item.
-        return false;
-
-    }
-}
-
+            };
+    });

@@ -14,13 +14,13 @@
 <section ng-controller = "MyController">   <!--initiates the ng-controller call -->
     <h2>My Grocery List</h2>
     <form ng-submit = "addItem()">      <!--submit function to add groceries -->
-        <input type = "text" ng-model = "newItem" id = "addGrocery" placeholder = "Add Grocery Item" />
+        <input type = "text" ng-model = "newItem" id = "addGrocery" placeholder = "Add Grocery Item" required/>
 
         <div ng-repeat = "newItem in items"> <!--test -->
             {{ newItem }}
         </div>
 
-        <button type = "submit" onClick = "empty()">Save</button>
+        <button type = "submit">Save</button>       <!--save our new item into the array -->
     </form>
 
     <p>{{ newItem }}</p>   <!--displays newItem below the input box -->
@@ -35,6 +35,7 @@
             </tr>
         </table>
     </article>
-</section>
+
+    </section>
 </body>
 </html>
