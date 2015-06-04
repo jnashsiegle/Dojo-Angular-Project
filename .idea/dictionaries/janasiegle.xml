@@ -3,6 +3,11 @@
     <words>
       <w>aname</w>
       <w>angularjs</w>
+      <w>dialogbox</w>
+      <w>dialogboxbody</w>
+      <w>dialogboxfoot</w>
+      <w>dialogboxhead</w>
+      <w>dialogoverlay</w>
     </words>
   </dictionary>
 </component>

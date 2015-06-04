@@ -4,6 +4,7 @@
 
 
 var myApp = angular.module ('myApp', []);           //names the app and creates the app
+
     myApp.controller('MyController', function($scope){      //make the controller and name
         console.log("in the controller");           //are we in the controller?  y/n
         $scope.newItem;                                   //create new item
@@ -16,13 +17,18 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
         $scope.addItem = function() {
 
 
-            if ($scope.groceries.indexOf($scope.newItem) == -1) {   //checking to see if the newItem is NOT on the list
-                $scope.groceries.push($scope.newItem);
+            if ($scope.groceries.indexOf($scope.newItem) == -1) {   //checking to see if the newItem is NOT on the
+            // list
+                $scope.groceries.push($scope.newItem());
                 $scope.newItem = '';                    //clears out the field after input
 
             }
             else{
-                alert('Item is already on the list');
+                ($scope.newItem === "null")
+                {
+                    alert("This item is already on your list!.");   //tell user duplicate item
+                    $scope.newItem = '';                            //reset field
+                }
             }
         };
 
@@ -34,3 +40,12 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
                 $scope.groceries.splice(index, 1);         //removes item referred to in index and loads array back in
             };
     });
+
+
+//function upperCaseFirstLetters(addGrocery) {
+ //   var myTextObject = document.getElementById(addGrocery);
+ //   myTextObject.value = myTextObject.value.replace(/\w\S*/g, function(txt) {
+ //       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+//   });
+//
+ //   }

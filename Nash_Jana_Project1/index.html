@@ -16,7 +16,7 @@
 <!-- Grocery List App -->
 <section ng-controller = "MyController">   <!--initiates the ng-controller call -->
     <h2>My Grocery List</h2>
-    <form ng-submit = "addItem()">      <!--submit function to add groceries -->
+    <form ng-submit = "addItem()">      <!--submit function to add grocery item -->
         <input type = "text" ng-model = "newItem" id = "addGrocery" placeholder = "Add Grocery Item" required/>
 
         <div ng-repeat = "newItem in items"> <!--test -->
@@ -40,5 +40,6 @@
     </article>
 
     </section>
+<footer></footer>
 </body>
 </html>
