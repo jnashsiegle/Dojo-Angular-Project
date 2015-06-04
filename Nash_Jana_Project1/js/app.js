@@ -17,12 +17,7 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
 
 
             if ($scope.groceries.indexOf($scope.newItem) == -1) {
-                alert('you already have that item');
-                return false;
-            }
-            else {
-
-                $scope.groceries.push($scope.newItem);
+              $scope.groceries.push($scope.newItem);
                 $scope.newItem = '';                    //clears out the field after input
 
             }
