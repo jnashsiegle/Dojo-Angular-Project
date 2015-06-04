@@ -14,15 +14,18 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
 
         //Add List Item
         $scope.addItem = function() {
-            var found = $scope.groceries.indexOf(newItem);
-            console.log(found);
 
+
+            if ($scope.groceries.indexOf($scope.newItem) == item) {
+                alert('you already have that item');
+                return false;
+            }
+            else {
 
                 $scope.groceries.push($scope.newItem);
                 $scope.newItem = '';                    //clears out the field after input
 
-        };
-
+            }
 
 
             //Remove List Item
@@ -32,7 +35,7 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
                 $scope.groceries.splice(index, 1);         //removes item referred to in index and loads array back in
             }
 
-
+        }
 
 
 
