@@ -16,7 +16,7 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
         $scope.addItem = function() {
 
 
-            if ($scope.groceries.indexOf($scope.newItem) == item) {
+            if ($scope.groceries.indexOf($scope.newItem) == -1) {
                 alert('you already have that item');
                 return false;
             }
