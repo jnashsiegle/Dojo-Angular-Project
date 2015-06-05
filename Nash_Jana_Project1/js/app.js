@@ -5,10 +5,10 @@
 
 var myApp = angular.module ('myApp', []);           //names the app and creates the app
 
-    myApp.controller('MyController', function($scope){      //make the controller and name
+    myApp.controller('MyController', function($scope){      //make the controller and name it
         console.log("in the controller");           //are we in the controller?  y/n
         $scope.newItem;                                   //create new item
-        console.log("about to add an item to our list");
+        console.log("about to add an item to our list"); //another error check
         //List Items
         $scope.groceries = ['Bread', 'Milk', 'Eggs', 'Cottage Cheese', 'Almond Milk'];  //pre-filled array
 
@@ -34,13 +34,15 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
             //Remove List Item
             $scope.removeItem = function (item) {         //create function to remove item from list
                 var index = $scope.groceries.indexOf(item);   //create index var to pinpoint where to change array
-                //Code to be added here for validation
+                //Code to be added here for validation      //not understanding what I am needing to add here as
+                // everything works....
                 $scope.groceries.splice(index, 1);         //removes item referred to in index and loads array back in
             };
     });
 
 
-//function upperCaseFirstLetters(addGrocery) {
+//function upperCaseFirstLetters(addGrocery) {              //was trying to work on code to convert inputs to
+// captialization or adjust to all uppercase/lowercase to prevent case-sensitive duplication......
  //   var myTextObject = document.getElementById(addGrocery);
  //   myTextObject.value = myTextObject.value.replace(/\w\S*/g, function(txt) {
  //       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();

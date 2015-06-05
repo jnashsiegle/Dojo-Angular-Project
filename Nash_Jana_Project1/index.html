@@ -19,7 +19,7 @@
         <input type = "text" ng-model = "newItem" id = "addGrocery" placeholder = "Add Grocery Item" required/>
 
         <div ng-repeat = "newItem in items"> <!--test -->
-            {{ newItem }}
+            {{ newItem | lowercase }}
         </div>
 
         <button type = "submit" id = "submit">Save</button>       <!--save our new item into the array -->
