@@ -19,16 +19,14 @@ var myApp = angular.module ('myApp', []);           //names the app and creates 
 
             if ($scope.groceries.indexOf($scope.newItem) == -1) {   //checking to see if the newItem is NOT on the
             // list
-                $scope.groceries.push($scope.newItem());
+                $scope.groceries.push($scope.newItem);
                 $scope.newItem = '';                    //clears out the field after input
 
             }
             else{
-                ($scope.newItem === "null")
-                {
+
                     alert("This item is already on your list!.");   //tell user duplicate item
                     $scope.newItem = '';                            //reset field
-                }
             }
         };
 
