@@ -1,25 +1,22 @@
 /**
- * Created by janasiegle on 6/1/15.
+ * Created by janasiegle on 6/7/15.
  */
 
 
-var myApp = angular.module ('myApp', []);
-    myApp.controller('MyController', function($scope){
-          $scope.myName = ('Jana');
+var myApp = angular.module ('myApp', []).controller("DBController", function ($scope, dataService){
+    $scope.userName;
 
+    $scope.nameArray = dataService.getNames();
+
+    $scope.addName = function(){        
+		dataService.addName($scope.userName);
+
+
+        $scope.userName = '';
+    }
+
+    $scope.deleteName = function(deletedName){
+       dataService.removeName(deletedName);
+    
+    }
 });
-
-var anotherApp = angular.module('anotherApp', []);
-    anotherApp.controller('AuthorController', function($scope) {
-        $scope.author = {
-            'aname': 'Jana Siegle',
-            'title': 'Staff Author',
-            'company': 'Full Sail'
-        }
-    });
-
-        angular.element(document).ready(function () {
-            angular.bootstrap(document.getElementById('anotherApp'), ['anotherApp']);
-
-
-    });
