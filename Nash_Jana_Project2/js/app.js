@@ -2,7 +2,7 @@
  * Created by janasiegle on 6/7/15.
  */
 
-/*Intiating Start of the App */
+/*Initiating Start of the App */
 var myApp = angular.module ('myApp', []);
 myApp.controller("DBController", function ($scope, dataService){
     console.log("in the controller"); //are we in the controller?  y/n
@@ -13,9 +13,9 @@ myApp.controller("DBController", function ($scope, dataService){
     $scope.empState;
     $scope.empZip;
 
-    $scope.employeesArray = dataService.getEmployees();  /* Pulling Employees from datasServices*/
+    $scope.employeesArray = dataService.getEmployees();  /* Pulling Employees from dataServices*/
 
-    console.log($scope.employeesArray); //another error check
+    console.log($scope.employeesArray + "are employees"); //another error check
 
 
 
@@ -30,7 +30,7 @@ myApp.controller("DBController", function ($scope, dataService){
         $scope.empCity = '';
         $scope.empState = '';
         $scope.empZip = '';
-    }
+    };
 
     /*Remove employee form array and records */
 

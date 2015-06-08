@@ -24,31 +24,31 @@
             <h2>Add an Entry</h2>
             <label for = "newName">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newName" id = "newName" name = "newName">
 
-             <div ng-repeat = "employee in employeesArray"> <!--test -->
+             <div ng-repeat = "item in employeesArray"> <!--test -->
                     {{ newName }}
                 </div>
 
             <label for = "empStreet">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "empStreet" id = "empStreet" name = "empStreet">
 
-             <div ng-repeat = "employee in employeesArray"> <!--test -->
+             <div ng-repeat = "item in employeesArray"> <!--test -->
                     {{ empStreet }}
                 </div>
 
             <label for = "empCity">City:</label><input type = "text" placeholder = "City" ng-model = "empCity" id = "empCity" name = "empCity">
 
-             <div ng-repeat = "employee in employeesArray"> <!--test -->
+             <div ng-repeat = "item in employeesArray"> <!--test -->
                     {{ empCity }}
                 </div>
 
             <label for = "empState">State:</label><input type = "text" placeholder = "State" ng-model = "empState" id = "empState" name = "empState">
 
-             <div ng-repeat = "employee in employeesArray"> <!--test -->
+             <div ng-repeat = "item in employeesArray"> <!--test -->
                     {{ empState }}
                 </div>
 
             <label for = "empZip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model = "empZip" id = "empZip" name = "empZip">
 
-             <div ng-repeat = "employee in employeesArray"> <!--test -->
+             <div ng-repeat = "item in employeesArray"> <!--test -->
                     {{ empZip }}
                 </div>
 
@@ -62,7 +62,7 @@
     <!--Employee Cards List -->
     
     <section id = "employeeList">
-        <article ng-repeat = "employee in employeesArray track by id($index)">
+        <article ng-repeat = "item in employeesArray track by id($index)">
                 <h3>{{ newName }}</h3>
                 <p>&times;</p>
            
