@@ -3,8 +3,8 @@
  */
 
 /*Initiating Start of the App */
-var myApp = angular.module ('myApp', []);
-myApp.controller("DBController", function ($scope, dataService){
+var app = angular.module ('myApp', []);
+app.controller("DBController", function ($scope, dataService){
     console.log("in the controller"); //are we in the controller?  y/n
 
     $scope.newName;
@@ -15,7 +15,7 @@ myApp.controller("DBController", function ($scope, dataService){
 
     $scope.employeesArray = dataService.getEmployees();  /* Pulling Employees from dataServices*/
 
-    console.log($scope.employeesArray + "are employees"); //another error check
+    console.log($scope.employeesArray); //another error check
 
 
 
@@ -34,8 +34,18 @@ myApp.controller("DBController", function ($scope, dataService){
 
     /*Remove employee form array and records */
 
-    $scope.removeEmployee = function(deletedEmployee){
+    $scope.deleteEmployee = function(deletedEmployee){
        dataService.removeEmployee(deletedEmployee);
 
+    }
+
+    /*Reset */
+
+    $scope.resetForm = function(){
+        $scope.newName = '';
+        $scope.empStreet = '';
+        $scope.empCity = '';
+        $scope.empState = '';
+        $scope.empZip = '';
     }
 });

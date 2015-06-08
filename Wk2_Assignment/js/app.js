@@ -13,7 +13,7 @@ var myApp = angular.module ('myApp', []).controller("DBController", function ($s
 
 
         $scope.userName = '';
-    }
+    };
 
     $scope.deleteName = function(deletedName){
        dataService.removeName(deletedName);
