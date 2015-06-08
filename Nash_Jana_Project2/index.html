@@ -22,47 +22,47 @@
     <!--Input New Employee Form -->
         <form ng-submit = "addEmployee()">
             <h2>Add an Entry</h2>
-            <label for "newName">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newName" id = "newName" name = "newName">
+            <label for = "newName">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newName" id = "newName" name = "newName">
 
-             <div ng-repeat = "newName in employees"> <!--test -->
+             <div ng-repeat = "newName in employeesArray"> <!--test -->
                     {{ newName }}
                 </div>
 
-            <label for "empStreet">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "empStreet" id = "empStreet" name = "empStreet">
+            <label for = "empStreet">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "empStreet" id = "empStreet" name = "empStreet">
 
-             <div ng-repeat = "empStreet in employees"> <!--test -->
+             <div ng-repeat = "empStreet in employeesArray"> <!--test -->
                     {{ empStreet }}
                 </div>
 
-            <label for "empCity">City:</label><input type = "text" placeholder = "City" ng-model = "empCity" id = "empCity" name = "empCity">
+            <label for = "empCity">City:</label><input type = "text" placeholder = "City" ng-model = "empCity" id = "empCity" name = "empCity">
 
-             <div ng-repeat = "newCity in employees"> <!--test -->
+             <div ng-repeat = "empCity in employeesArray"> <!--test -->
                     {{ empCity }}
                 </div>
 
-            <label for "empState">State:</label><input type = "text" placeholder = "State" ng-model = "empState" id = "empState" name = "empState">
+            <label for = "empState">State:</label><input type = "text" placeholder = "State" ng-model = "empState" id = "empState" name = "empState">
 
-             <div ng-repeat = "empState in employees"> <!--test -->
+             <div ng-repeat = "empState in employeesArray"> <!--test -->
                     {{ empState }}
                 </div>
 
-            <label for "empZip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model = "empZip" id = "empZip" name = "empZip">
+            <label for = "empZip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model = "empZip" id = "empZip" name = "empZip">
 
-             <div ng-repeat = "empZip in employees"> <!--test -->
+             <div ng-repeat = "empZip in employeesArray"> <!--test -->
                     {{ empZip }}
                 </div>
 
             <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "resetForm()">Reset Form</button>
-            <button type = "submit" name = "addBtn" vallue = "Add Employee">Add Employee</button>
+            <button type = "submit" name = "addBtn" value = "Add Employee">Add Employee</button>
             </form>
 
-         <h4>There are {{ employees.length }} employees in your company.</h4> 
+         <h4>There are {{ employeesArray.length }} employees in your company.</h4>
     </section>
 
     <!--Employee Cards List -->
     
-    <section = "employeeList">
-        <article ng-repeat = "emp in employeeArray track by id($index)">                      
+    <section id = "employeeList">
+        <article ng-repeat = "emp in employeesArray track by id($index)">
                 <h3>{{ newName }}</h3>
                 <p>&times;</p>
            

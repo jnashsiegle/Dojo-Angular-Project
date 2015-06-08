@@ -16,7 +16,7 @@
 
 	this.getEmployees = function(){    //adds directly to the object
 		var str = localStorage.getItem("EmployeeLS");    //str = string
-		employeesArray = JSON.parse(str) ||  employeesArray;;  //str we just got out of local storage if nothing in local storage use default names Array
+		employeesArray = JSON.parse(str) ||  employeesArray;  //str we just got out of local storage if nothing in local storage use default names Array
 		return employeesArray;
 	}
 
