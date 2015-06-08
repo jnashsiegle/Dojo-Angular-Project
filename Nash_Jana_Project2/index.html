@@ -57,13 +57,13 @@
             </form>
 
          <h4>There are {{ employeesArray.length }} employees in your company.</h4>
-    </section>
+
 
     <!--Employee Cards List -->
     
-    <section id = "employeeList">
+
         <article ng-repeat = "item in employeesArray track by ($index)">
-                <h3>{{ newName }}</h3>
+                <h3>{{ employeesArray.newName }}</h3>
 
                 <p>&times;</p>
            

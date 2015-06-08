@@ -40,6 +40,7 @@ myApp.controller('MyController', function ($scope) { //make the controller and n
 });
 
 
+
 //function upperCaseFirstLetters(addGrocery) {              //was trying to work on code to convert inputs to
 // captialization or adjust to all uppercase/lowercase to prevent case-sensitive duplication......
  //   var myTextObject = document.getElementById(addGrocery);
