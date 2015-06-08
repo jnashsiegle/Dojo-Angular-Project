@@ -228,7 +228,7 @@ input[type="text"].focus{
 STRUCTURE - Define as Needed
 ====================================================================== */
 body {
-    background: url("http://api.thumbr.it/whitenoise-361x370.png?");
+    background: url("../images/bkg.png");
 }
 
 section {
