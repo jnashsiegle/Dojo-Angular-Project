@@ -2,24 +2,36 @@
  * Created by janasiegle on 6/7/15.
  */
 
-
-var myApp = angular.module('myApp', []); //names the app and creates the app
-
-myApp.controller('DBController', function ($scope) { //make the controller and name it
+/*Intiating Start of the App */
+var myApp = angular.module ('myApp', []).controller("DBController", function ($scope, dataService){
     console.log("in the controller"); //are we in the controller?  y/n
-    $scope.newEmployee; //create new item
-    console.log("about to add an item to our list"); //another error check
-    //List Items
-    $scope.employees; //pre-filled array moved to dataService.js
+
+    $scope.newName;
+    $scope.empStreet;
+    $scope.empCity;
+    $scope.empState;
+    $scope.empZip;
+
+    $scope.employeesArray = dataService.getEmployees();  /* Pulling Employees from datasServices*/
+    
+    console.log($scope.employeesArray); //another error check
+     
 
 
-    //Add List Item
-    $scope.addEmployee = function(){        
-        dataService.addEmployee($scope.employees);
+    //Add List Item     
+    $scope.addEmployee = function(){
+        dataService.newEmployee($scope.newName, $scope.empStreet, $scope.empCity,
+        $scope.empState, $scope.empZip);
 
-
-        $scope.employees = '';
+    /*Reset Input Fields to blank */
+        $scope.newName = '';
+        $scope.empStreet = '';
+        $scope.empCity = '';
+        $scope.empState = '';
+        $scope.empZip = '';
     }
+
+    /*Remove employee form array and records */
 
     $scope.removeEmployee = function(deletedEmployee){
        dataService.removeEmployee(deletedEmployee);
