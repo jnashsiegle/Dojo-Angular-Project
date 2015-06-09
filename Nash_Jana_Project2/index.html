@@ -13,42 +13,42 @@
 
 
 </head>
-<body ng-app = "myApp">
+<body ng-app = "myApp" ng-controller = "DBController">
 
 <!-- Employee Directory -->
 <h1>Employee Directory</h1>
 
-    <section ng-controller = "DBController">
+    <section>
     <!--Input New Employee Form -->
         <form ng-submit = "addEmployee()">
             <h2>Add an Entry</h2>
             <label for = "newName">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newName" id = "newName" name = "newName">
 
-             <div ng-repeat = "item in employeesArray track by ($index)"> <!--test -->
+             <div ng-repeat = "employee in employeesArray track by ($index)"> <!--test -->
                     {{ newName }}
                 </div>
 
             <label for = "empStreet">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "empStreet" id = "empStreet" name = "empStreet">
 
-             <div ng-repeat = "item in employeesArray track by ($index)"> <!--test -->
+             <div ng-repeat = "employee in employeesArray track by ($index)"> <!--test -->
                     {{ empStreet }}
                 </div>
 
             <label for = "empCity">City:</label><input type = "text" placeholder = "City" ng-model = "empCity" id = "empCity" name = "empCity">
 
-             <div ng-repeat = "item in employeesArray track by ($index)"> <!--test -->
+             <div ng-repeat = "employee in employeesArray track by ($index)"> <!--test -->
                     {{ empCity }}
                 </div>
 
             <label for = "empState">State:</label><input type = "text" placeholder = "State" ng-model = "empState" id = "empState" name = "empState">
 
-             <div ng-repeat = "item in employeesArray track by ($index)"> <!--test -->
+             <div ng-repeat = "employee in employeesArray track by ($index)"> <!--test -->
                     {{ empState }}
                 </div>
 
             <label for = "empZip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model = "empZip" id = "empZip" name = "empZip">
 
-             <div ng-repeat = "item in employeesArray track by ($index)"> <!--test -->
+             <div ng-repeat = "employee in employeesArray track by ($index)"> <!--test -->
                     {{ empZip }}
                 </div>
 
@@ -62,14 +62,14 @@
     <!--Employee Cards List -->
     
 
-        <article ng-repeat = "item in employeesArray track by ($index)">
-                <h3>{{ employeesArray.newName }}</h3>
+        <article ng-repeat = "employee in employeesArray track by ($index)">
+                <h3>{{ employee.newName }}</h3>
 
                 <p>&times;</p>
            
             <div class = "info">
-                <p> {{ empStreet  }}</p>
-                <p> {{ empCity }} {{ empState }} {{ empZip }}</p>
+                <p> {{ employee.empStreet  }}</p>
+                <p> {{ employee.empCity }} {{ employee.empState }} {{ employee.empZip }}</p>
             </div>
 
         </article>

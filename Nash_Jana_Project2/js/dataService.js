@@ -1,6 +1,6 @@
 /**Created by Jana Nash-Siegle, June 7, 2015 */
 
-angular.module("myApp").service("dataService", function () {
+angular.module("myApp").service("dataService", function(){
     var employeesArray;
     console.log("We are in the dataService");
 
