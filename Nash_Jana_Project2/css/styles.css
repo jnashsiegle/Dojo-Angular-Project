@@ -113,6 +113,10 @@ section::after {
     display: table;
     clear: both; }
 
+article {
+    border: 1px solid black;
+}
+
 /*
 ======================================================================
 STYLEGUIDE - Default / Define as Needed
