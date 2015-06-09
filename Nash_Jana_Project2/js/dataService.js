@@ -6,7 +6,7 @@ angular.module("myApp").service("dataService", function(){
 
     employeesArray = [{
         name: "Jane Doe",
-        address: "1102 Baymeadow",
+        street: "1102 Baymeadow",
         city: "Houston",
         state: "TX",
         zip: "77062"
@@ -25,21 +25,22 @@ angular.module("myApp").service("dataService", function(){
     this.newEmployee = function (name, street, city, state, zip) { /*parameters to add */
         var str;
         var newEmployee = {
-            name: name,
-            street: street,
-            city: city,
-            state: state,
-            zip: zip
+            name: newName,
+            street: empStreet,
+            city: empCity,
+            state: empState,
+            zip: empZip
         };
 
         employeesArray.push(newEmployee); //(newEmployee variable from above)
         str = JSON.stringify(employeesArray);
         localStorage.setItem("EmployeeLS", str); //sets items in Local Storage saved so on reload names still exist
-    };
+        };
+
 
     /*Time to fire an employee or they resigned */
 
-    this.removeEmployee = function (item) {
+    this.removeEmployee = function (name, street, city, state, zip) {    /*params to delete */
         var str;
         employeesArray.splice(employeesArray.indexOf(item), 1);
         str = JSON.stringify(employeesArray);

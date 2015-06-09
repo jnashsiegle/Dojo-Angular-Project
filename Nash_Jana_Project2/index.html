@@ -62,14 +62,14 @@
     <!--Employee Cards List -->
     
 
-        <article ng-repeat = "employee in employeesArray track by ($index)">
-                <h3>{{ employee.newName }}</h3>
+        <article ng-repeat = "Employee in employeesArray track by ($index)">
+                <h3>{{ Employee.name }}</h3>
 
                 <p>&times;</p>
            
             <div class = "info">
-                <p> {{ employee.empStreet  }}</p>
-                <p> {{ employee.empCity }} {{ employee.empState }} {{ employee.empZip }}</p>
+                <p> {{ Employee.street  }}</p>
+                <p> {{ Employee.city }}, {{ Employee.state }} {{ Employee.zip }}</p>
             </div>
 
         </article>
