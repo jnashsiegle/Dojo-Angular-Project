@@ -20,46 +20,52 @@
 
     <section>
     <!--Input New Employee Form -->
-        <form ng-submit = "addEmployee()">
+        <form name = "myForm">
             <h2>Add an Entry</h2>
-            <label for = "newName">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newName" id = "newName" name = "newName">
+            <label for = "name">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newEmployee.name" id = "name" name = "name">
 
-             <div> <!--test -->{{ newName }} </div>
+             <div> <!--test -->{{ newEmployee.name }} </div>
 
-            <label for = "empStreet">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "empStreet" id = "empStreet" name = "empStreet">
+            <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street">
 
-             <div > <!--test --> {{ empStreet }} </div>
+             <div > <!--test --> {{ newEmployee.street }} </div>
 
-            <label for = "empCity">City:</label><input type = "text" placeholder = "City" ng-model = "empCity" id = "empCity" name = "empCity">
+            <label for = "city">City:</label><input type = "text" placeholder = "City" ng-model = "newEmployee.city"
+                                                       id =
+                "city" name = "city">
 
-             <div > <!--test -->                    {{ empCity }}                </div>
+             <div > <!--test -->                    {{ newEmployee.city }}                </div>
 
-            <label for = "empState">State:</label><input type = "text" placeholder = "State" ng-model = "empState" id = "empState" name = "empState">
+            <label for = "state">State:</label><input type = "text" placeholder = "State" ng-model = "newEmployee.state" id = "state" name = "state">
 
-             <div> <!--test -->                    {{ empState }}                </div>
+             <div> <!--test -->                    {{ newEmployee.state }}                </div>
 
-            <label for = "empZip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model = "empZip" id = "empZip" name = "empZip">
+            <label for = "zip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model =
+                "newEmployee.zip" id = "zip" name = "zip">
 
-             <div> <!--test -->                    {{ empZip }}                </div>
+             <div> <!--test -->                    {{ newEmployee.zip }}                </div>
 
-            <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "resetForm()">Reset Form</button>
-            <button type = "submit" name = "addBtn" value = "Add Employee">Add Employee</button>
+            <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
+            Form</button>
+            <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewEmployee()" value = "Add Employee">Add Employee</button>
             </form>
 
-         <h4>There are {{ employeesArray.length }} employees in your company.</h4>
+         <h4>There are {{ $scope.employees.length }} employees in your company.</h4>
 
 
     <!--Employee Cards List -->
     
 
-        <article ng-repeat = "Employee in employeesArray track by ($index)">
-                <h3>{{ Employee.name }}</h3>
+        <article ng-repeat = "emp in employees track by $index">
+            <button type = "button" class = "close" aria-hidden = "true"
+                    ng-click = "removeEmp($index)">&times;</button>
 
-                <p>&times;</p>
-           
+            <span class = "user">&nbsp;</span>
+                <h3>{{ emp.name }}</h3>
+
             <div class = "info">
-                <p> {{ Employee.street  }}</p>
-                <p> {{ Employee.city }}, {{ Employee.state }} {{ Employee.zip }}</p>
+                <p> {{ emp.street  }}</p>
+                <p> {{ emp.city }}, {{ emp.state }} {{ emp.zip }}</p>
             </div>
 
         </article>

@@ -1,50 +1,36 @@
 /**Created by Jana Nash-Siegle, June 7, 2015 */
 
 angular.module("myApp").service("dataService", function(){
-    var employeesArray;
-    console.log("We are in the dataService");
 
-    employeesArray = [{
-        name: "Jane Doe",
-        street: "1102 Baymeadow",
-        city: "Houston",
-        state: "TX",
-        zip: "77062"
-    }];
-    console.log(employeesArray); //test
-    /* Let's Get Employee array*/
+    var employeeArray = [];
 
-    this.getEmployees = function () { //adds directly to the object
-        var str = localStorage.getItem("EmployeeLS"); //str = string
-        employeesArray = JSON.parse(str) || employeesArray; //str we just got out of local storage if nothing in local storage use default employees Array
-        return employeesArray;
+    this.getEmployees = function(){
+        var empArray = JSON.parse(localStorage.getItem("employeesLS")) || [];
+        employeeArray = empArray;
+            console.log(empArray);
+        return employeeArray;
     };
 
-    /*Add a New Employee*/
-
-    this.newEmployee = function (name, street, city, state, zip) { /*parameters to add */
-        var str;
-        var newEmployee = {
-            name: newName,
-            street: empStreet,
-            city: empCity,
-            state: empState,
-            zip: empZip
+    this.saveEmployee = function(pName, pStreet, pCity, pState, pZip){
+        var savedEmployees = {
+            name:       pName,
+            street:     pStreet,
+            city:       pCity,
+            state:      pState,
+            zip:        pZip
         };
-
-        employeesArray.push(newEmployee); //(newEmployee variable from above)
-        str = JSON.stringify(employeesArray);
-        localStorage.setItem("EmployeeLS", str); //sets items in Local Storage saved so on reload names still exist
-        };
-
-
-    /*Time to fire an employee or they resigned */
-
-    this.removeEmployee = function (name, street, city, state, zip) {    /*params to delete */
-        var str;
-        employeesArray.splice(employeesArray.indexOf(item), 1);
-        str = JSON.stringify(employeesArray);
-        localStorage.setItem("EmployeeLS", str);
-        //sets items deleted from returning on reload
+        employeeArray.push(savedEmployees);
+        localStorage.setItem("employeesLS", JSON.stringify(employeeArray));
     };
+
+    this.removeEmployeeAt = function(pIndex){
+        employeeArray.splice(pIndex,1);
+        localStorage.setItem("employeesLS", JSON.stringify(employeeArray))
+    };
+
+    this.destroyLocalStorage = function(){
+        employeeArray.splice(0);
+        localStorage.clear();
+    };
+
 });

@@ -3,59 +3,29 @@
  */
 
 /*Initiating Start of the App */
-var App = angular.module('myApp', []); //names the app and creates the app
 
-App.controller('DBController', function ($scope, dataService) { //make the controller and name it
+var myApp = angular.module("myApp", []);
+myApp.controller("DBController", function($scope,dataService) {
 
-    console.log("in the controller"); //are we in the controller?  y/n
+    $scope.employees = dataService.getEmployees();
+    $scope.newEmployee = {};
 
-    $scope.newName;  //create Name
-    $scope.empStreet; //create Street
-    $scope.empCity;  //create City
-    $scope.empState; //create State
-    $scope.empZip;  //create Zip
-
-    $scope.employeesArray = dataService.getEmployees(); /* Pulling Employees from dataServices*/
-
-    console.log($scope.employeesArray); //another error check
-
-
-
-    //Add List Item
-    $scope.addEmployee = function () {
-        var employee = {
-            "newName": $scope.newName,
-            "empStreet": $scope.empStreet,
-            "empCity": $scope.empCity,
-            "empState": $scope.empState,
-            "empZip": $scope.empZip
-        };
-        dataService.newEmployee(employee);
-
-
-
-        /*Reset Input Fields to blank */
-        $scope.newName = '';
-        $scope.empStreet = '';
-        $scope.empCity = '';
-        $scope.empState = '';
-        $scope.empZip = '';
+    $scope.addNewEmployee = function () {
+        dataService.saveEmployee($scope.newEmployee.name, $scope.newEmployee.street, $scope.newEmployee.city, $scope.newEmployee.state,       $scope.newEmployee.zip);
+        $scope.newEmployee = {};
     };
 
-    /*Remove employee form array and records */
-
-    $scope.deleteEmployee = function (deletedEmployee) {
-        dataService.removeEmployee(deletedEmployee);
-
+    $scope.removeEmp = function(idx){
+        dataService.removeEmployeeAt(idx);
     };
 
-    /*Reset */
-
-    $scope.resetForm = function () {
-        $scope.newName = '';
-        $scope.empStreet = '';
-        $scope.empCity = '';
-        $scope.empState = '';
-        $scope.empZip = '';
+    $scope.clearIt = function () {
+        dataService.destroyLocalStorage();
     };
+
+    $scope.reset = function() {
+        $scope.newEmployee = angular.copy($scope.employees);
+        if ($scope.myForm) $scope.myForm.$setPristine();
+    };
+
 });
