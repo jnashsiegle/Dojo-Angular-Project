@@ -22,7 +22,7 @@ angular.module("myApp").service("dataService", function () {
 
     /*Add a New Employee*/
 
-    this.addEmployee = function (name, street, city, state, zip) { /*parameters to add */
+    this.newEmployee = function (name, street, city, state, zip) { /*parameters to add */
         var str;
         var newEmployee = {
             name: name,
@@ -44,6 +44,6 @@ angular.module("myApp").service("dataService", function () {
         employeesArray.splice(employeesArray.indexOf(item), 1);
         str = JSON.stringify(employeesArray);
         localStorage.setItem("EmployeeLS", str);
-        //sets items deleted from returning on reload 
+        //sets items deleted from returning on reload
     };
 });

@@ -7,20 +7,22 @@
 
 	this.getNames = function(){    //adds directly to the object
 		var str = localStorage.getItem("NameLS");    //str = string
-		namesArray = JSON.parse(str) ||  namesArray;;  //str we just got out of local storage if nothing in local storage use default names Array
+		namesArray = JSON.parse(str) ||  namesArray;  //str we just got out of local storage if nothing in local storage use default names Array
 		return namesArray;
 
 	}
 
 	this.addName = function(pName){ 
+		var str;
 		namesArray.push(pName);
-		var str = JSON.stringify(namesArray);  
+		str = JSON.stringify(namesArray);
 		localStorage.setItem("NameLS",str); //sets items in Local Storage saved so on reload names still exist
 	}
 
 	this.removeName = function(pName){
+		var str;
 		namesArray.splice(namesArray.indexOf(pName),1);
-		var str = JSON.stringify(namesArray);  
+		str = JSON.stringify(namesArray);
 		localStorage.setItem("NameLS",str);   //sets items deleted from returning on reload
 	}
 
