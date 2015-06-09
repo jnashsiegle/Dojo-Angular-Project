@@ -30,7 +30,7 @@ App.controller('DBController', function ($scope, dataService) { //make the contr
             "empState": $scope.empState,
             "empZip": $scope.empZip
         };
-        dataService.addEmployee(employee);
+        dataService.newEmployee(employee);
 
 
 

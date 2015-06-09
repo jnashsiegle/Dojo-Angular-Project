@@ -22,7 +22,7 @@ angular.module("myApp").service("dataService", function(){
 
     /*Add a New Employee*/
 
-    this.addEmployee = function (name, street, city, state, zip) { /*parameters to add */
+    this.newEmployee = function (name, street, city, state, zip) { /*parameters to add */
         var str;
         var newEmployee = {
             name: newName,
