@@ -5,8 +5,13 @@
 /*Initiating Start of the App */
 var app = angular.module('myApp', []);
 app.controller("DBController", function ($scope, dataService) {
-    console.log("in the controller"); //are we in the controller?  y/n
 
+    console.log("in the controller"); //are we in the controller?  y/n
+    $scope.newName;
+    $scope.empStreet;
+    $scope.empCity;
+    $scope.empState;
+    $scope.empZip;
 
     $scope.employeesArray = dataService.getEmployees(); /* Pulling Employees from dataServices*/
 
@@ -18,6 +23,8 @@ app.controller("DBController", function ($scope, dataService) {
     $scope.addEmployee = function () {
         dataService.newEmployee($scope.newName, $scope.empStreet, $scope.empCity,
             $scope.empState, $scope.empZip);
+
+
 
         /*Reset Input Fields to blank */
         $scope.newName = '';
