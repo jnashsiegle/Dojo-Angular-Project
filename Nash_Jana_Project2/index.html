@@ -20,34 +20,33 @@
 
     <section>
     <!--Input New Employee Form -->
-        <form name = "myForm">
+        <form name = "myForm" novalidate>
             <h2>Add an Entry</h2>
-            <label for = "name">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newEmployee.name" id = "name" name = "name">
+            <label for = "name">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newEmployee.name" id = "name" name = "name" required>
+            <p ng-show="myForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
 
              <div> <!--test -->{{ newEmployee.name }} </div>
 
-            <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street">
+            <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street" required>
 
              <div > <!--test --> {{ newEmployee.street }} </div>
 
-            <label for = "city">City:</label><input type = "text" placeholder = "City" ng-model = "newEmployee.city"
-                                                       id =
-                "city" name = "city">
+            <label for = "city">City:</label><input type = "text" placeholder = "City" ng-model = "newEmployee.city"                     id ="city" name = "city" required>
 
              <div > <!--test -->                    {{ newEmployee.city }}                </div>
 
-            <label for = "state">State:</label><input type = "text" placeholder = "State" ng-model = "newEmployee.state" id = "state" name = "state">
+            <label for = "state">State:</label><input type = "text" placeholder = "State" ng-model = "newEmployee.state" id = "state" name = "state" required>
 
              <div> <!--test -->                    {{ newEmployee.state }}                </div>
 
             <label for = "zip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model =
-                "newEmployee.zip" id = "zip" name = "zip">
+                "newEmployee.zip" id = "zip" name = "zip" required>
 
              <div> <!--test -->                    {{ newEmployee.zip }}                </div>
 
             <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
             Form</button>
-            <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewEmployee()" value = "Add Employee">Add Employee</button>
+            <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewEmployee()" value = "Add Employee" ng-disabled="myForm.$invalid">Add Employee</button>
             </form>
 
          <h4>There are {{ employees.length }} employees in your company.</h4>
