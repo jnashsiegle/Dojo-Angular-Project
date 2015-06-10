@@ -23,9 +23,8 @@
         <form name = "myForm" novalidate>
             <h2>Add an Entry</h2>
             <label for = "name">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newEmployee.name" id = "name" name = "name" required>
-            <p ng-show="myForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
 
-             <div> <!--test -->{{ newEmployee.name }} </div>
+            <div> <!--test -->{{ newEmployee.name }} </div>
 
             <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street" required>
 
