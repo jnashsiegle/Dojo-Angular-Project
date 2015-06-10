@@ -25,11 +25,13 @@ time, mark, audio, video,
     font-size: 100%;
     vertical-align: baseline;
     text-decoration: none;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
-    display: block; }
+    display: block;
+}
 html {
     box-sizing: border-box;
 }
@@ -43,11 +45,7 @@ td:after, #remove:after{
     clear: both;
 }
 
-body {
-    width: 85%;
-    line-height: 1;
-    margin: 0 auto;
-}
+
 
 ol, ul {
     list-style: none; }
@@ -97,43 +95,85 @@ td:first-child {
 ======================================================================
 STRUCTURE
 ====================================================================== */
-section {
-    width: 50%;
-    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */ /* 5/16 */ /* 5/16 */ /* 5/16 */
-    -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */ /* 5/16 */ /* 5/16 */ /* 5/16 */
-    -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */ /* 5/16 */ /* 5/16 */ /* 5/16 */
-    border: 0.125em solid grey; /* 2/16 */
-    margin-left: auto;
-    margin-right: auto;
-    background: #ffffff;
-}
 
-section::after {
+section {
+    width: 85%;
+    margin: 0 auto;
+    padding: 3.125em 1.25em; /* 50/16 */
+    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
+    -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
+    -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
+    border: 0.125em solid grey; /* 2/16 */
+    background: #ffffff;
+    box-shadow: 0.625em 0.625em 3.4375em -0.625em rgba(77, 75, 77, 1); /* 10/16 */
+    border: 2px solid blue;
+}
+section header {
+    margin: 0 auto 2.5em auto; /* 40/16 */
+    padding: 0.9375em; /* 15/16 */
+    text-align: center; }
+section header p {
+    color: #cccccc;
+}
+section::after, article::after, h4::before {
     content: "";
     display: table;
-    clear: both; }
-
-article {
-    border: 1px solid black;
+    clear: both;
 }
+article {
+    width: 25%;
+    padding: 0.625em; /* 10/16 */
+    border: 1px solid #56595c;
+    float: left;
+    margin-left: 0.625em; /* 10/16 */
+    background-color: #000000;
+    border-radius: 5px;
+}
+div.info {
+    background-color: whitesmoke;
+    padding: 0 0.625em 0 1.25em; /* 10/16 */ /* 20/16 */
+    border-radius: 0.3125em; /* 5/16 */
+
+}
+
+
+
 
 /*
 ======================================================================
 STYLEGUIDE - Default / Define as Needed
 ====================================================================== */
 html {
-    font-size: 62.5%; }
+    font-size: 62.5%;
+}
 
 body {
     font: 400 1.3em/1.45 sans-serif;
-    color: #999999; }
+    color: #ffffff;
+    width: 100%;
+    line-height: 1;
+    margin: 0 auto;
+    background-color: #000000;
+}
+footer {
+    position: absolute;  
+    bottom: 0;
+    width: 80%;
+    margin: 0 0 0 -40%;
+    left: 50%;
+}
+footer > p {
+    color: #ffffff;
+    text-align: center;
+}
 
 /*
 ======================================================================
 TYPOGRAPHY - Define As Needed
 ====================================================================== */
 h1, h2, h3, h4, h5, h6 {
-    color: #555555;}
+    color: #555555;
+}
 
 h2, h3 {
     text-transform: uppercase;
@@ -143,35 +183,48 @@ h2, h3 {
 h1 {
     font-size: 3.4em;
     font-weight: 100;
+    color: #ffffff;
+    margin: 2rem 0 4rem 11rem;
 }
 
 h2 {
     font-size: 1.6em;
-    margin: 0.3125em 0 1.25em 0; /* 5/16 */ /* 20/16 */
+    margin: 0.6250em 0 1.25em 0; /* 5/16 */ /* 20/16 */
     padding-bottom: 0.625em; /* 10/16 */
+    padding-left: 1.5625em; /* 25/16 */
+    color: #ffffff;
     text-transform: capitalize;
 }
 
 h3 {
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 0.625em; } /* 10/16 */
+    text-align: center;
+    margin-bottom: 2em;/* 10/16 */
+    color: #ffffff;
+
+}
 
 h4 {
     font-size: 1.4em;
-    margin: 1.25em 0 1.25em 0; /* 20/16 */ /* 20/16 */
+    margin: 0 0 2.5em 0; /* 20/16 */ /* 20/16 */
     padding: 0.625em 0 1.25em 0; /* 10/16 */ /* 20/16 */
     text-align: center;
+    color: #000000;
 }
 
 strong, em {
-    font-weight: 600; }
+    font-weight: 600;
+}
 p {
     font-size: 1.5em;
     padding-top: 0.625em; /* 10/16 */
-    margin-left: 25%;
     text-align: left;
-
+    color: #000000;
+}
+p:nth-child(2){
+    padding-top: 0;
+    padding-bottom: .625em;
 }
 
 /*
@@ -180,37 +233,45 @@ IMAGERY
 ======================================================================*/
 .user {
     background: url("../images/user.png")left top;
-    width: 32px;
-    height: 32px;
+    width: 2.5em; /* 32/16 */
+    height: 2em; /* 32/16 */
     display: block;
     float: left;
+    z-index: 99999999;
 }
 /*
 ======================================================================
 FORMS
 ====================================================================== */
 form{
-    display: block;
+    display: inline-block;
     width: 33%;
-    border: 1px solid black;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #000000;
+    float: left;
+    margin-bottom: 3.75em; /* 60/16 */
 }
 label{
     display: block;
     width: 85%;
-    margin: 0 auto;
+    margin: 0 auto 10px;
 }
 input[type="text"]{
     display: block;
+    background-color: #cccccc;
     width: 85%;
-    margin: 0 auto;
-    padding: 10px;
-    border: solid 1px #fff;
-    box-shadow: inset 1px 1px 2px 0 #707070;
+    margin: 0 auto 20px;
+    padding: 0.625em; /* 10/16 */
+    border: solid 0.0625em #fff; /* 1/16 */
+    box-shadow: inset 0.0625em 0.0625em 0.125em 0 #707070; /* 1/16 */ /* 1/16 */ /* 2/16 */
     transition: box-shadow 0.3s;
 }
 input[type="text"]:focus,
 input[type="text"].focus{
-    box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+    box-shadow: inset 0.0625em 0.0625em 0.125em 0 #c9c9c9; /* 1/16 */ /* 1/16 */ /* 2/16 */
+    background-color: #ffffff;
 }
 #submit {
     background: #8d979e;
@@ -233,25 +294,23 @@ input[type="text"].focus{
     background-image: linear-gradient(to bottom, #475157, #191a1a);
     text-decoration: none;
 }
-
-/*
-======================================================================
-STRUCTURE - Define as Needed
-====================================================================== */
-body {
-    background: url("../images/bkg.png");
+button{
+    margin: 0.625em 0 1.25em 2em; /* 10/16 */ /* 20/16 */ /* 20/16 */
+    font-size: 1.5rem;
+    border-radius: 0.3125em; /* 5/16 */
+}
+button.close{
+    float: right;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    color: #ffffff
+    ;
 }
 
-section {
-    margin-top: 15%;
-    padding: 3.125em 1.25em; /* 50/16 */ /* 20/16 */ /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */ /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */
-    box-shadow: 0.625em 0.625em 3.4375em -0.625em rgba(77,75,77,1);} /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */
-section header {
-    margin: 0 auto 2.5em auto; /* 40/16 */
-    padding: 0.9375em; /* 15/16 */
-    text-align: center; }
-section header p {
-    color: #cccccc; }
+/*
 
 /*
 ======================================================================
