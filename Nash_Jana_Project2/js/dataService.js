@@ -11,10 +11,11 @@ angular.module("myApp").service("dataService", function(){
         return employeeArray;
     };
 
-    this.saveEmployee = function(pName, pPosition, pStreet, pCity, pState, pZip){
+    this.saveEmployee = function(pName, pPosition, pEmail, pStreet, pCity, pState, pZip){
         var savedEmployees = {
             name:       pName,
             position:   pPosition,
+            email:      pEmail, 
             street:     pStreet,
             city:       pCity,
             state:      pState,

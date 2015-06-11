@@ -26,6 +26,32 @@
 
             <div> <!--test --> {{newEmployee.position}} </div>
 
+            <label>Your email</label>
+    <input type="email" 
+      placeholder="user@email.com" 
+      name="email" 
+      ng-model="newEmployee.email" 
+      ng-minlength=3 ng-maxlength=20 required />
+    <div class="error-container" 
+         ng-show="myForm.email.$dirty && myForm.email.$invalid">
+      <small class="error" 
+             ng-show="myForm.email.$error.required">
+             Your email is required.
+      </small>
+      <small class="error" 
+             ng-show="myForm.email.$error.minlength">
+              Your email is required to be at least 3 characters
+      </small>
+      <small class="error" 
+             ng-show="myForm.email.$error.email">
+             That is not a valid email. Please input a valid email.
+      </small>
+      <small class="error" 
+             ng-show="myForm.email.$error.maxlength">
+              Your email cannot be longer than 20 characters
+      </small>
+    </div>
+
             <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street" required>
 
              <div > <!--test --> {{ newEmployee.street }} </div>
