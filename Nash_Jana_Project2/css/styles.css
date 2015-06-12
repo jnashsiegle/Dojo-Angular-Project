@@ -33,7 +33,12 @@ footer, header, menu, nav, section {
     display: block;
 }
 html {
+    position: relative;
+    min-height: 100%;
     box-sizing: border-box;
+}
+body{
+    margin: 0 0 50px; /* bottom = footer height */
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -159,11 +164,11 @@ body {
 
 }
 footer {
-    position: fixed;  
-    bottom: 10px;
+    position: absolute;  
+    bottom: 0;
     width: 100%;
+    height:  50px;
     left: 0;
-    right: 0; 
 }
 footer  p {
     position: relative;
