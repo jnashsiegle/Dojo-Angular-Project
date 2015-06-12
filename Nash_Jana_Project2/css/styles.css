@@ -156,7 +156,7 @@ body {
     line-height: 1;
     margin: 0 auto;
     background-color: #000000;
-    overflow: auto;
+
 }
 footer {
     position: fixed;  
@@ -166,6 +166,7 @@ footer {
     right: 0; 
 }
 footer  p {
+    position: relative;
     color: #ffffff;
     text-align: center;
 }
