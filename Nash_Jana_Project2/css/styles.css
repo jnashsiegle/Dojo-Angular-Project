@@ -38,26 +38,22 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
 td:after, #remove:after{
     content: "";
     display: table;
     clear: both;
 }
-
-
-
 ol, ul {
-    list-style: none; }
-
+    list-style: none;
+}
 blockquote, q {
-    quotes: none; }
-
+    quotes: none; 
+}
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
-    content: none; }
-
+    content: none; 
+}
 table {
     border: 0.125em solid rgba(77,75,77,.5); /* 2/16 */
     border-collapse: collapse;
@@ -124,24 +120,26 @@ article {
     width: 25%;
     padding: 0.625em; /* 10/16 */
     border: 1px solid #56595c;
-    float: left;
+    float: right;
     margin-left: 0.625em; /* 10/16 */
     background-color: #000000;
     border-radius: 5px;
-}
-article > h2{
-    text-align: center;
 }
 div.info {
     background-color: whitesmoke;
     padding:  .75rem 3rem; 
     border-radius: 0.3125em; /* 5/16 */
+    -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+    -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
     margin-top: 2em;
 }
-
-
-
-
+small.error {
+    padding: 5rem;
+    margin-bottom: 5rem;
+}
+label[for=street]{
+    margin-top: 5rem;  
+}
 /*
 ======================================================================
 STYLEGUIDE - Default / Define as Needed
@@ -161,13 +159,13 @@ body {
 }
 footer {
     position: absolute;  
-    bottom: 0;
+    bottom: 20px;
     width: 80%;
     margin: 0 auto;
     left: 0;
     right: 0; 
 }
-footer > p {
+footer  p {
     color: #ffffff;
     text-align: center;
 }
@@ -180,26 +178,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #555555;
     line-height: 1.5;
 }
-
 h2 {
     text-transform: uppercase;
     text-align: center;
     text-shadow: 0.25em 0.25em 0.375em rgba(150, 150, 150, .5); /* 4/16 */ /* 4/16 */ /* 6/16 */
 }
-
 h1 {
     font-size: 3.4em;
     font-weight: 100;
     color: #ffffff;
     margin: 2rem 0 4rem 11rem;
 }
-
 h2 {
     font-size: 1.6em;     
     color: #ffffff;
     text-transform: capitalize;
 }
-
 h3{
     font-size: 1.2em;
     font-weight: 600;
@@ -208,13 +202,15 @@ h3{
     margin: 0 auto;
     padding: 0;
 }
-
 h4 {
     font-size: 1rem;
     text-align: center;
     color: #ffffff;
 }
-
+h4#count {
+    font-size: 2rem;
+    color: #000000;
+}
 strong, em {
     font-weight: 600;
 }
@@ -228,7 +224,6 @@ p:nth-child(2){
     padding-top: 0;
     padding-bottom: .625em;
 }
-
 /*
 ======================================================================
 IMAGERY
@@ -239,7 +234,6 @@ IMAGERY
     height: 2em; /* 32/16 */
     display: block;
     float: left;
-    z-index: 99999999;
 }
 /*
 ======================================================================
@@ -267,8 +261,9 @@ input[type="text"], input[type = "email"]{
     margin: 0 auto 20px;
     padding: 0.625em; /* 10/16 */
     border: solid 0.0625em #fff; /* 1/16 */
-    box-shadow: inset 0.0625em 0.0625em 0.125em 0 #707070; /* 1/16 */ /* 1/16 */ /* 2/16 */
-    transition: box-shadow 0.3s;
+    box-shadow: inset 0.0625em 0.0625em 0.125em 0 #ffffff; /* 1/16 */ /* 1/16 */ /* 2/16 */
+    -webkit-transition: box-shadow 0.3s;
+            transition: box-shadow 0.3s;
 }
 input[type="text"]:focus,
 input[type="text"].focus, input[type = "email"]:focus, input[type = "email"].focus{
@@ -289,7 +284,6 @@ input[type="text"].focus, input[type = "email"]:focus, input[type = "email"].foc
     border: solid #1f628d 0.125em; /* 2/16 */
     text-decoration: none;
 }
-
 #submit:hover {
     background: #475157;
     background-image: -webkit-linear-gradient(top, #475157, #191a1a);
@@ -308,12 +302,8 @@ button.close{
     border: none;
     margin: 0;
     cursor: pointer;
-    color: #ffffff
-    ;
+    color: #ffffff;
 }
-
-/*
-
 /*
 ======================================================================
 #Name of Section

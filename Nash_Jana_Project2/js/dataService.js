@@ -34,5 +34,5 @@ angular.module("myApp").service("dataService", function(){
         employeeArray.splice(0);
         localStorage.clear();
     };
-
+      
 });

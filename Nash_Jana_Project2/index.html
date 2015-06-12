@@ -10,84 +10,77 @@
 </head>
 <body ng-app = "myApp" ng-controller = "DBController">
 
-<!-- Employee Directory -->
-<h1>Employee Directory</h1>
+  <!-- Employee Directory -->
+  <h1>Employee Directory</h1>
+      <section>
+      <!--Input New Employee Form -->
+          <form name = "myForm" novalidate>
+              <h2>Add an Entry</h2>
+              <label for = "name">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newEmployee.name" id = "name" name = "name" required>
 
-    <section>
-    <!--Input New Employee Form -->
-        <form name = "myForm" novalidate>
-            <h2>Add an Entry</h2>
-            <label for = "name">Employee:</label><input type = "text" placeholder = "Full Name" ng-model = "newEmployee.name" id = "name" name = "name" required>
+             <!-- <div> {{ newEmployee.name }} </div> Tests during development for input success-->
 
-            <div> <!--test -->{{ newEmployee.name }} </div>
+              <label for = "position">Position:</label><input type = "text" placeholder = "Position" ng-model =
+                  "newEmployee.position" id = "position" name = "position">
 
-            <label for = "position">Position:</label><input type = "text" placeholder = "Position" ng-model =
-                "newEmployee.position" id = "position" name = "position">
+             <!-- <div> <!--test  {{newEmployee.position}} </div> Tests during development for input success -->
 
-            <div> <!--test --> {{newEmployee.position}} </div>
+              <label>Your email</label><input type="email" placeholder="user@email.com" name="email" ng-model="newEmployee.email" ng-minlength=3 ng-maxlength=20 required />
+              <div class="error-container" ng-show="myForm.email.$dirty && myForm.email.$invalid"> <!--error and validation of email inputs, message for requirement -->
+                <small class="error" ng-show="myForm.email.$error.required">
+                       Your email is required.&nbsp;        <!--message to show -->
+                </small>              
+                <small class="error" ng-show="myForm.email.$error.email">
+                       That is not a valid email. Please input a valid email.  <!--messages to show -->
+                </small>              
+              </div>
 
-            <label>Your email</label><input type="email" placeholder="user@email.com" name="email" ng-model="newEmployee.email" ng-minlength=3 ng-maxlength=20 required />
-            <div class="error-container" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-              <small class="error" ng-show="myForm.email.$error.required">
-                     Your email is required.
-              </small>
-              <small class="error" ng-show="myForm.email.$error.minlength">
-                      Your email is required to be at least 3 characters
-              </small>
-              <small class="error" ng-show="myForm.email.$error.email">
-                     That is not a valid email. Please input a valid email.
-              </small>
-              <small class="error" ng-show="myForm.email.$error.maxlength">
-                      Your email cannot be longer than 20 characters
-              </small>
-            </div>
+               <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street" required>
+ 
+              <!-- <div > <!--test {{ newEmployee.street }} </div> Tests during development for input success-->
 
-             <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street" required>
+              <label for = "city">City:</label><input type = "text" placeholder = "City" ng-model = "newEmployee.city"                     id ="city" name = "city" required>
 
-             <div > <!--test --> {{ newEmployee.street }} </div>
+              <!-- <div > <!--test {{ newEmployee.city }}   </div> Tests during development for input success-->
 
-            <label for = "city">City:</label><input type = "text" placeholder = "City" ng-model = "newEmployee.city"                     id ="city" name = "city" required>
+              <label for = "state">State:</label><input type = "text" placeholder = "State" ng-model = "newEmployee.state" id = "state" name = "state" required>
+ 
+               <!-- <div> <!--test {{ newEmployee.state }}   </div> Tests during development for input success-->
 
-             <div > <!--test -->                    {{ newEmployee.city }}                </div>
+              <label for = "zip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model ="newEmployee.zip" id = "zip" name = "zip" required>
 
-            <label for = "state">State:</label><input type = "text" placeholder = "State" ng-model = "newEmployee.state" id = "state" name = "state" required>
+              <!--  <div> <!--test{{ newEmployee.zip }} </div> Tests during development for input success-->
 
-             <div> <!--test -->                    {{ newEmployee.state }}                </div>
-
-            <label for = "zip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model =
-                "newEmployee.zip" id = "zip" name = "zip" required>
-
-             <div> <!--test -->                    {{ newEmployee.zip }}                </div>
-
-            <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
-            Form</button>
-            <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewEmployee()" value = "Add Employee" ng-disabled="myForm.$invalid">Add Employee</button>
-            </form>
+              <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
+              Form</button>  <!--Reset Form Button / pristine as in untouched  -->
+              <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewEmployee()" value = "Add Employee" ng-disabled="myForm.$invalid">Add Employee</button> <!--add new employee information to local storage and array -->
+              </form>
 
 
 
 
-    <!--Employee Cards List -->
-    
+      <!--Employee Cards List / Display Employee Info-->
+      
 
-        <article ng-repeat = "emp in employees track by $index">
-            <button type = "button" class = "close" aria-hidden = "true"
-                    ng-click = "removeEmp($index)">&times;</button>
+          <article ng-repeat = "emp in employees track by $index">
+              <button type = "button" class = "close" aria-hidden = "true"
+                      ng-click = "removeEmp($index)">&times;</button> <!---delete employee -->                      
+                      <!--Employee Name/position/email -->
+              <span class = "user">&nbsp;</span>
+                 <h2>{{ emp.name }}</h2>  <!--display name -->
+                 <h4> {{emp.position }}</h4> <!--display position -->
+                 <h4> {{emp.email}}</h4>  <!--display email -->
 
-            <span class = "user">&nbsp;</span>
-               <h2>{{ emp.name }}</h2>
-               <h4> {{emp.position }}</h4>
-               <h4> {{emp.email}}</h4>
+                 <!-- Employee address -->
+              <div class = "info">
+                  <p> {{ emp.street  }}</p>  <!--display street -->
+                  <p> {{ emp.city }}, {{ emp.state }} {{ emp.zip }}</p> <!--display city state zip-->
+              </div>
 
-            <div class = "info">
-                <p> {{ emp.street  }}</p>
-                <p> {{ emp.city }}, {{ emp.state }} {{ emp.zip }}</p>
-            </div>
-
-        </article>
-        <h4>There are {{ employees.length }} employees in your company.</h4>
-    </section>
-    <!--end of employee cards-->
+          </article>
+          <h4 id = "count">There are {{ employees.length }} employees in your company.</h4>  <!--how many employees? -->
+      </section>
+      <!--end of employee cards-->
 
        
 <footer><p>&copy;2015, Jana Nash-Siegle / FWF - Week 2 / Silvestro</p></footer>
