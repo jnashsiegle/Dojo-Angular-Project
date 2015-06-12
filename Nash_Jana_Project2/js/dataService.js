@@ -2,7 +2,7 @@
 
 angular.module("myApp").service("dataService", function(){  /*initiating dataservice file within app*/
 
-    var employeeArray = [];         /*setting var array from LocalStorage */
+    var employeeArray = [];             /*setting var array from LocalStorage */
 
     this.getEmployees = function(){
         var empArray = JSON.parse(localStorage.getItem("employeesLS")) || []; /*runs through Local Storage and creates array*/
