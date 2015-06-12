@@ -129,11 +129,14 @@ article {
     background-color: #000000;
     border-radius: 5px;
 }
+article > h2{
+    text-align: center;
+}
 div.info {
     background-color: whitesmoke;
-    padding: 0 0.625em 0 1.25em; /* 10/16 */ /* 20/16 */
+    padding:  .75rem 3rem; 
     border-radius: 0.3125em; /* 5/16 */
-
+    margin-top: 2em;
 }
 
 
@@ -175,10 +178,12 @@ TYPOGRAPHY - Define As Needed
 ====================================================================== */
 h1, h2, h3, h4, h5, h6 {
     color: #555555;
+    line-height: 1.5;
 }
 
-h2, h3 {
+h2 {
     text-transform: uppercase;
+    text-align: center;
     text-shadow: 0.25em 0.25em 0.375em rgba(150, 150, 150, .5); /* 4/16 */ /* 4/16 */ /* 6/16 */
 }
 
@@ -190,29 +195,24 @@ h1 {
 }
 
 h2 {
-    font-size: 1.6em;
-    margin: 0.6250em 0 1.25em 0; /* 5/16 */ /* 20/16 */
-    padding-bottom: 0.625em; /* 10/16 */
-    padding-left: 1.5625em; /* 25/16 */
+    font-size: 1.6em;     
     color: #ffffff;
     text-transform: capitalize;
 }
 
-h3 {
+h3{
     font-size: 1.2em;
     font-weight: 600;
-    text-align: center;
-    margin-bottom: 2em;/* 10/16 */
+    text-align: center;    
     color: #ffffff;
-
+    margin: 0 auto;
+    padding: 0;
 }
 
 h4 {
-    font-size: 1.4em;
-    margin: 0 0 2.5em 0; /* 20/16 */ /* 20/16 */
-    padding: 0.625em 0 1.25em 0; /* 10/16 */ /* 20/16 */
+    font-size: 1rem;
     text-align: center;
-    color: #000000;
+    color: #ffffff;
 }
 
 strong, em {

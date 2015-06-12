@@ -28,14 +28,4 @@ myApp.controller("DBController", function($scope,dataService) {
         if ($scope.myForm) $scope.myForm.$setPristine();
     };
     
-    $scope.submitted = false;
-    $scope.signupForm = function() {
-    if ($scope.signup_form.$valid) {
-      // Submit as normal
-    } else {
-      $scope.signup_form.submitted = true;
-    }
-  }
-
-
 });
