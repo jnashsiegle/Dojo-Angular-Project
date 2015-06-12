@@ -158,10 +158,9 @@ body {
     background-color: #000000;
 }
 footer {
-    position: absolute;  
-    bottom: 20px;
-    width: 80%;
-    margin: 0 auto;
+    position: fixed;  
+    bottom: 0;
+    width: 100%;
     left: 0;
     right: 0; 
 }
