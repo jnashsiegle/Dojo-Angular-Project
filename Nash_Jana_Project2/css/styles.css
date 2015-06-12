@@ -153,8 +153,7 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    min-height: 100%;
+body {    
     font: 400 1.3em/1.45 sans-serif;
     color: #ffffff;
     width: 100%;
@@ -163,19 +162,6 @@ body {
     background-color: #000000;
 
 }
-footer {
-    position: absolute;  
-    bottom: 0;
-    width: 100%;
-    height:  50px;
-    left: 0;
-}
-footer  p {
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-}
-
 /*
 ======================================================================
 TYPOGRAPHY - Define As Needed
