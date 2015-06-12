@@ -23,7 +23,7 @@
               <label for = "position">Position:</label><input type = "text" placeholder = "Position" ng-model =
                   "newEmployee.position" id = "position" name = "position">
 
-             <!-- <div> <!--test  {{newEmployee.position}} </div> Tests during development for input success -->
+             <!-- <div> test  {{newEmployee.position}} </div> Tests during development for input success -->
 
               <label>Your email</label><input type="email" placeholder="user@email.com" name="email" ng-model="newEmployee.email" ng-minlength=3 ng-maxlength=20 required />
               <div class="error-container" ng-show="myForm.email.$dirty && myForm.email.$invalid"> <!--error and validation of email inputs, message for requirement -->
@@ -37,19 +37,19 @@
 
                <label for = "street">Street:</label><input type = "text" placeholder = "Street Address" ng-model = "newEmployee.street" id = "street" name = "street" required>
  
-              <!-- <div > <!--test {{ newEmployee.street }} </div> Tests during development for input success-->
+              <!-- <div > test {{ newEmployee.street }} </div> Tests during development for input success-->
 
               <label for = "city">City:</label><input type = "text" placeholder = "City" ng-model = "newEmployee.city"                     id ="city" name = "city" required>
 
-              <!-- <div > <!--test {{ newEmployee.city }}   </div> Tests during development for input success-->
+              <!-- <div >test {{ newEmployee.city }}   </div> Tests during development for input success-->
 
               <label for = "state">State:</label><input type = "text" placeholder = "State" ng-model = "newEmployee.state" id = "state" name = "state" required>
  
-               <!-- <div> <!--test {{ newEmployee.state }}   </div> Tests during development for input success-->
+               <!-- <div> test {{ newEmployee.state }}   </div> Tests during development for input success-->
 
               <label for = "zip">Zip Code:</label><input type = "text" placeholder = "Zip Code" ng-model ="newEmployee.zip" id = "zip" name = "zip" required>
 
-              <!--  <div> <!--test{{ newEmployee.zip }} </div> Tests during development for input success-->
+              <!--  <div> test{{ newEmployee.zip }} </div> Tests during development for input success-->
 
               <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
               Form</button>  <!--Reset Form Button / pristine as in untouched  -->
