@@ -38,7 +38,7 @@ myApp.controller('HomeController', function($scope, $route){
 
 myApp.controller("ChildController", function($scope,dataService) { /*connect myApp to ChildController to dataservice*/
 
-    $scope.children = dataService.getChildren();
+    $scope.child = dataService.getChildren();
     /*pull child info from dataservice*/
     $scope.newChild = {};
 
