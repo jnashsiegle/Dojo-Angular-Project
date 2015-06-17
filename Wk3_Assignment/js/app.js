@@ -1,25 +1,34 @@
 /**
- * Created by janasiegle on 6/1/15.
+ * Created by janasiegle on 6/15/15.
  */
 
+var mainApp = angular.module("mainApp", ['ngRoute']);
 
-var myApp = angular.module ('myApp', []);
-    myApp.controller('MyController', function($scope){
-          $scope.myName = ('Jana');
-
+mainApp.config(function($routeProvider) {
+    $routeProvider
+        .when('/home', {
+            templateUrl: 'home.html',
+            controller: 'StudentController'
+        })
+        .when('/viewStudents', {
+            templateUrl: 'viewStudents.html',
+            controller: 'StudentController'
+        })
+        .otherwise({
+            redirectTo: '/home'
+        });
 });
 
-var anotherApp = angular.module('anotherApp', []);
-    anotherApp.controller('AuthorController', function($scope) {
-        $scope.author = {
-            'aname': 'Jana Siegle',
-            'title': 'Staff Author',
-            'company': 'Full Sail'
-        }
-    });
+mainApp.controller('StudentController', function($scope) {
+    $scope.students = [
+        {name: 'Mark Waugh', city:'New York'},
+        {name: 'Steve Jonathan', city:'London'},
+        {name: 'John Marcus', city:'Paris'}
+    ];
 
-        angular.element(document).ready(function () {
-            angular.bootstrap(document.getElementById('anotherApp'), ['anotherApp']);
+    $scope.message = "Click on the hyper link to view the students list.";
+});
 
 
-    });
+
+

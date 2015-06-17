@@ -15,7 +15,7 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
         var savedEmployees = {          /*keys for employee information*/
             name:       pName,
             position:   pPosition,
-            email:      pEmail, 
+            email:      pEmail,
             street:     pStreet,
             city:       pCity,
             state:      pState,

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projects List</title>
+	
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <script src = "js/app.js"></script>
+
+</head>
+<body>
+
+	<!-- First section of content -->
+    <section ng-app = "mainApp" ng-controller = "ProjectController">
+
+
+        <div class="container">
+            <h2> View Projects </h2>
+
+
+            <form ng-submit = "addProject()" name = "myForm">      <!--submit function to add grocery item -->
+                <input type = "text" ng-model = "projects.title" id = "addProject" placeholder = "Add Project Item"
+                       required/>
+
+                    <div ng-repeat = "title in projects"> <!--test -->
+                        {{ newProject.title }}
+                    </div>
+
+                <input type = "text" ng-model = "contact" id = "newContact" placeholder = "Contact for Project"
+                       required/>
+                    <div ng-repeat = "contact in projects"> {{newProject.contact}}</div> <!--test -->
+
+
+                <button type = "submit" id = "submit">Save</button>       <!--save our new item into the array -->
+            </form>
+
+            <p>{{ newProject }}</p>   <!--displays newItem below the input box -->
+            <article>
+                <h4>There are {{ projects.length }} projects on your list.</h4>
+                <!--shows the quantity of items in array -->
+
+
+                <label for = "search">Search:</label><input type="text" ng-model="title" name = "search" id =
+                    "search" />
+                <br/>
+                <table>
+                    <!--Search our projects list by title contact or status -->
+                    <tr ng-repeat = "project in projects | filter:title">  <!--table row for displaying item with class of ng-scope -->
+                        <td> {{project.title +"&nbsp;&nbsp;|&nbsp;&nbsp;" + project.contact + "&nbsp;&nbsp;|&nbsp;&nbsp;" +
+                            project.status}}</td>
+
+
+                        {{$scope.projects}}
+                        <!--table cell displaying actual item with class of ng-binding -->
+                        <td>
+                            <button ng-click = "removeProject(project)" id = "remove">&times;</button>
+                            <!--adds remove button -->
+                        </td>
+                    </tr>
+                </table>
+            </article>
+
+            <a href="#/home"> Back</a>
+        </div>
+</section>
+   
+	
+
+    
+</body>
+</html>

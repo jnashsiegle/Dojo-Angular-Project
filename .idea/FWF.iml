@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="angular" level="application" />
     <orderEntry type="library" name="Modernizr-2.6.2" level="application" />
+    <orderEntry type="library" name="angular-route.min.js" level="application" />
   </component>
 </module>
