@@ -11,10 +11,6 @@ myApp.config(function($routeProvider) {
             templateUrl: 'home.html',
             controller: 'HomeController'
         })
-        .when('/viewInstructions', {
-            templateUrl: 'instructions.html',
-            controller: 'InsController'
-        })
         .when('/viewContacts', {
             templateUrl: 'contacts.html',
             controller: 'ContactController'
@@ -89,15 +85,5 @@ myApp.controller("ContactController", function($scope,dataService) { /*connect m
 
 });
 
-myApp.controller("InsController", function($scope,dataService){
-    $scope.instructions = dataService.getInstruction();
 
-    $scope.newInstruction = {};
-});
 
-angular.module('bedTime', []);
-   myApp.controller('DateController', ['$scope', function($scope) {
-        $scope.example = {
-            value: new Date(1970, 0, 1, 14, 57, 0)
-        };
-    }]);
