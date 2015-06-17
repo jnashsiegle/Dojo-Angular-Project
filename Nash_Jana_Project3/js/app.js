@@ -13,7 +13,7 @@ myApp.config(function($routeProvider) {
         })
         .when('/viewInstructions', {
             templateUrl: 'instructions.html',
-            controller: 'InstructionController'
+            controller: 'InsController'
         })
         .when('/viewContacts', {
             templateUrl: 'contacts.html',
@@ -38,7 +38,7 @@ myApp.controller('HomeController', function($scope, $route){
 
 myApp.controller("ChildController", function($scope,dataService) { /*connect myApp to ChildController to dataservice*/
 
-    $scope.child = dataService.getChildren();
+    $scope.children = dataService.getChildren();
     /*pull child info from dataservice*/
     $scope.newChild = {};
 
@@ -88,3 +88,16 @@ myApp.controller("ContactController", function($scope,dataService) { /*connect m
 
 
 });
+
+myApp.controller("InsController", function($scope,dataService){
+    $scope.instructions = dataService.getInstruction();
+
+    $scope.newInstruction = {};
+});
+
+angular.module('bedTime', []);
+   myApp.controller('DateController', ['$scope', function($scope) {
+        $scope.example = {
+            value: new Date(1970, 0, 1, 14, 57, 0)
+        };
+    }]);

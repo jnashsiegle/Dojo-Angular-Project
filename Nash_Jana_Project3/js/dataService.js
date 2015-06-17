@@ -43,13 +43,19 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
 
  /*+++++++++++++++++++++++CONTACT++++++++++++++++++++++++*/
 
-    var contactsArray = [];             /*setting var array from LocalStorage */
+    var contactsArray = [
+        {
+            name: "Brian Murray",
+            phone: "(555)555-5555",
+            relation: "doctor"
+        }
+    ];             /*setting var array from LocalStorage */
 
     this.getContact = function(){
-        var conArray = JSON.parse(localStorage.getItem("contactsLS")) || []; /*runs through Local Storage and creates
+        var str = JSON.parse(localStorage.getItem("contactsLS")) || []; /*runs through Local Storage and creates
          array*/
-        contactsArray = conArray;
-        console.log(conArray);
+        contactsArray = JSON.parse(str) || contactsArray
+        console.log(contactsArray);
         return contactsArray;
     };
 
@@ -75,3 +81,13 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
 
 
 });
+
+    var instructionArray = {};
+
+this.getInstruction = function(){
+    var str = localStorage.getItem("instructionLS");
+    instructionArray = JSON.parse(str) || instructionArray;
+    console.log(instructionArray);
+    return instructionArray;
+    };
+
