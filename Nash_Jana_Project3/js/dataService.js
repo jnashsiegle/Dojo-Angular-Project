@@ -46,12 +46,14 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
     ];             /*setting var array from LocalStorage */
 
     this.getContact = function(){
-        var str = JSON.parse(localStorage.getItem("contactsLS")) || []; /*runs through Local Storage and creates
+        var conArray = JSON.parse(localStorage.getItem("contactsLS")) || []; /*runs through Local Storage and creates
          array*/
-        contactsArray = JSON.parse(str) || contactsArray
-        console.log(contactsArray);
+        contactsArray = conArray
+        console.log(conArray);
         return contactsArray;
     };
+
+    
 
     this.saveContact = function(pName, pPhone, pRelation){
         var savedContacts = {          /*keys for contact information*/
