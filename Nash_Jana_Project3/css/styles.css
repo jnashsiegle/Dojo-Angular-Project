@@ -60,6 +60,12 @@ q:before, q:after {
     content: '';
     content: none;
 }
+article#contacts{
+    width: 50%;
+}
+td{
+    width: 33%;
+}
 table {
     border: 0.125em solid rgba(77,75,77,.5); /* 2/16 */
     border-collapse: collapse;
@@ -67,7 +73,7 @@ table {
     margin: 1.25em auto; /* 20/16 */
     font-size: 1.5em;
     color: #555555;
-    width: 50%; /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */ /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */
+    width: 100%; /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */ /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */
     box-shadow: 0.625em 0.625em 3.4375em -0.625em rgba(77,75,77,1); /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */
 }
 tr:nth-child(even) {
@@ -76,13 +82,7 @@ tr:nth-child(even) {
 tr:nth-child(odd){
     background: #ffffff;
 }
-td:first-child {
-    width: 75%;
-    line-height: 1;
-    vertical-align: middle;
-    padding: 0.625em 0 0.625em 0.625em; /* 10/16 */ /* 10/16 */ /* 10/16 */
-    text-align: left;
-}
+
 #remove {
     width: 25%;
     float: right;
@@ -271,7 +271,7 @@ label{
     width: 85%;
     margin: 0 auto 10px;
 }
-input[type="text"], input[type = "email"]{
+input[type="text"], input[type = "email"], input[type ="tel"]{
     display: block;
     background-color: #cccccc;
     width: 85%;

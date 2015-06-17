@@ -61,3 +61,30 @@ myApp.controller("ChildController", function($scope,dataService) { /*connect myA
     };
 
 });
+myApp.controller("ContactController", function($scope,dataService) { /*connect myApp to ContactController to
+ dataservice*/
+
+    $scope.contacts = dataService.getContact();
+    /*pull contact info from dataservice*/
+    $scope.newContact = {};
+
+    $scope.addNewContact = function () {       /*function to create new child w/keys; save to LS*/
+        dataService.saveContact($scope.newContact.name, $scope.newContact.phone, $scope.newContact.relation);
+        $scope.newContact = {};
+    };
+
+    $scope.removeContact = function (idx) {           /*call delete function from data service */
+        dataService.removeContactAt(idx);
+    };
+
+    $scope.clearIt = function () {              /* call total clear of LS */
+        dataService.destroyLocalStorage();
+    };
+
+    $scope.reset = function () {             /*reset form and clear all fields **does not destroy local info in storage*/
+        $scope.newContact = angular.copy($scope.contacts);
+        if ($scope.myForm) $scope.myForm.$setPristine();
+    };
+
+
+});

@@ -36,7 +36,7 @@
 
                 <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
                     Form</button>  <!--Reset Form Button / pristine as in untouched  -->
-                <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewChild()" value = "Add Child" ng-disabled="myForm.$invalid">Add Child</button> <!--add new employee information to local storage and array -->
+                <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewChild()" value = "Add Child" ng-disabled="myForm.$invalid">Add Child</button> <!--add new child information to local storage and array -->
             </form>
 
             <p>{{ newChild }}</p>   <!--displays newItem below the input box -->
@@ -44,7 +44,7 @@
             <article ng-repeat = "child in children track by $index">
                 <button type = "button" class = "close" aria-hidden = "true"
                         ng-click = "removeChild($index)">&times;</button> <!---delete employee -->
-                <!--Employee Name/position/email -->
+                <!--child Name/info -->
                 <span class = "user">&nbsp;</span>
                 <h2>{{ child.name }}</h2>  <!--display name -->
                 <h4> {{child.age }}</h4> <!--display position -->

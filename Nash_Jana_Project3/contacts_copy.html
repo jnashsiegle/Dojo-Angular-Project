@@ -35,54 +35,29 @@
             </form>
 
 
-            <article id = "contacts">
+            <article>
                 <h4>There are {{ contacts.length }} contacts on your list.</h4>
                 <!--shows the quantity of items in array -->
 
 
-
                 <label for = "search">Search:</label><input type="text" ng-model="title" placeholder =
-                    "filter contacts by name or relation..." name = "search" id = "search" />
+                    "filter contacts..." name = "search" id = "search" />
                 <br/>
                 <table>
-                    <thead>
-                    <tr>
-                        <td>
-                            Name
-                        </td>
-                        <td>
-                            Phone
-                        </td>
-                        <td>
-                            Relation
-                        </td>
-                    </tr>
-                    </thead>
-                    <tbody>
                     <!--Search our projects list by title contact or status -->
-                    <tr ng-repeat = "contact in contacts | filter:title | orderBy: 'relation'">
-                        <td>
-                            {{contact.name}}
-                        </td>
-                        <td>
-                            {{contact.phone}}
-                        </td>
-                        <td>
-                            {{contact.relation}}
-                        </td>
+                    <tr ng-repeat = "contact in contacts | filter:relation">
+                        <!--table row for displaying item with class of ng-scope -->
+                        <td> {{contact.name +"&nbsp;&nbsp;|&nbsp;&nbsp;" + contact.phone +
+                            "&nbsp;&nbsp;|&nbsp;&nbsp;" +
+                            contact.relation}}</td>
+
+
+                        {{$scope.contacts}}
+                        <!--table cell displaying actual item with class of ng-binding -->
                         <td>
                             <button ng-click = "removeContact(contact)" id = "remove">&times;</button>
                             <!--adds remove button -->
                         </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-
-
-                        <!--{{$scope.contacts}}-->
-                        <!--table cell displaying actual item with class of ng-binding -->
-
                     </tr>
                 </table>
             </article>
