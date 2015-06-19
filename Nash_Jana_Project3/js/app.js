@@ -19,7 +19,7 @@ myApp.config(function($routeProvider) {
             templateUrl:  'children.html',
             controller:  'ChildController'
         })
-        .when('/viewParams/:amazing', {
+        .when('/home/viewParams/:amazing', {
             templateUrl: "home.html",
             controller: 'HomeController'
         })
@@ -89,7 +89,10 @@ myApp.config(function($routeProvider) {
         $scope.newContact = angular.copy($scope.contacts);
         if ($scope.myForm) $scope.myForm.$setPristine();
     };
-
+        function clearBox(gameContainer)
+        {
+            document.getElementById(gameContainer).innerHTML = "";
+        }
 
 });
 
