@@ -1,5 +1,8 @@
 /*Created by Jana-Nash-Siegle
-FWF - Sivestro */
+FWF - Sivestro
+colors: #1dbfd7 - teal
+        #f26522 - orange
+*/
 
 /* CSS RESET
 ====================================================================================================
@@ -164,14 +167,47 @@ small.error {
     padding: 5rem;
     margin-bottom: 5rem;
 }
-article#game, article#game h1{
-    text-align: center;
-    margin: 0 50px auto;
-    float: right;
+/*
+=====================================================================
+GAME
+=====================================================================*/
+#game {
+    background-color: #1dbfd7;
 }
-article#game > p {
-    text-align: left;
-    margin: 10%;
+section#game p{
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+}
+#gameContainer{
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#gameContainer{
+    width: 75%;
+    float: none;
+    margin: 0 auto;
+    background-color: transparent;
+}
+#gameReset{
+    float: left;
+    margin: 20px;
+    display: block;
+    font-size: 2rem;
+    background-color: green;
+    border-radius: 50%;
+    padding: 10px;
+}
+.gameBtn {
+    font-size: 3rem;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f26522;
+    margin-right: 10px;
 }
 /*
 ======================================================================

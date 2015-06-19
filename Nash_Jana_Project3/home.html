@@ -12,26 +12,24 @@
     <h1>The Word of the Day is:</h1>
     <h2 id = "paramWord">test {{word}}</h2>
 </div>
-<section>
-    <article ng-style = "myStyle" id = "game">
+<section id = "game">
         <p>Click on any of the buttons below to start the reading/color game. Clear the game with the reset
             button.</p>
-    <input type="button" value="Red" ng-click="myStyle={background:'red'}" onclick="document.getElementById('Object').innerHTML = 'A is for Apple.  Apples are RED'" />
-    <input type="button" value="Green" ng-click="myStyle={background:'green'}" onclick="document.getElementById('Object').innerHTML = 'F is for Frog.  Frogs are GREEN.'" />
-    <input type="button" value="Blue"
-           ng-click="myStyle={background:'blue'}"onclick="document.getElementById('Object').innerHTML =
-           'O is for Ocean.  The ocean is BLUE.'" />
-    <input type="button" value="Yellow" ng-click="myStyle={background:'yellow'}"onclick="document.getElementById('Object').innerHTML = 'S is for Sun.  The sun is YELLOW.'" />
-    <input type="button" value="Pink"
-           ng-click="myStyle={background:'pink'}"onclick="document.getElementById('Object').innerHTML =
-           'P is for Pink.  Some flowers can be PINK.'" />
-    <input type="button" value="White" ng-click="myStyle={background:'white'}"onclick="document.getElementById('Object').innerHTML = 'S is for Snow.  Snow is white.'" />
-        <h1 id = "Object"></h1>
-    </article>
-    <input type="reset" value="Reset" onClick="window.location.reload()">
+    <article id = "gameContainer"ng-style = "myStyle">
+            <input type="button" value="Red" ng-click="myStyle={background:'red'}" onclick="document.getElementById('Object').innerHTML = 'A is for Apple.  Apples are RED'"  class = "gameBtn" />
+            <input type="button" value="Green" ng-click="myStyle={background:'green'}" onclick="document.getElementById('Object').innerHTML = 'F is for Frog.  Frogs are GREEN.'" class = "gameBtn"/>
+            <input type="button" value="Blue"
+                   ng-click="myStyle={background:'blue'}"onclick="document.getElementById('Object').innerHTML =
+                   'O is for Ocean.  The ocean is BLUE.'" class = "gameBtn" />
+            <input type="button" value="Yellow" ng-click="myStyle={background:'yellow'}"onclick="document.getElementById('Object').innerHTML = 'S is for Sun.  The sun is YELLOW.'" class = "gameBtn" />
+            <input type="button" value="Pink"
+                   ng-click="myStyle={background:'pink'}"onclick="document.getElementById('Object').innerHTML =
+                   'P is for Pink.  Some flowers can be PINK.'" class = "gameBtn" />
+            <input type="button" value="White" ng-click="myStyle={background:'white'}"onclick="document.getElementById('Object').innerHTML = 'S is for Snow.  Snow is white.'" class = "gameBtn" />
+    <h1 id = "Object"></h1>
 
-
-
+</article>
+    <input type="reset" value="Reset" id = "gameReset" onClick="clearBox">
 </section>
 
 
