@@ -357,9 +357,11 @@ button{
     font-size: 2rem;
     background-color: red;
     border-radius: 0.3125em; /* 5/16 */
+    cursor: pointer;
 }
 button:disabled {
-    color:  #5f5f5f;
+    color:  #007007;
+    cursor: not-allowed;
 }
 button.close{
     float: right;

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06920127-3e71-4910-85f2-6dc937c2dcad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3.zip" afterPath="$PROJECT_DIR$/Nash_Jana_Project3.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3/children.html" afterPath="$PROJECT_DIR$/Nash_Jana_Project3/children.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3/contacts.html" afterPath="$PROJECT_DIR$/Nash_Jana_Project3/contacts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css" afterPath="$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FWF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +46,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5696721">
-              <caret line="361" column="20" selection-start-line="361" selection-start-column="20" selection-end-line="361" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.6106557">
+              <caret line="363" column="23" selection-start-line="363" selection-start-column="23" selection-end-line="363" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -811,8 +807,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5696721">
-          <caret line="361" column="20" selection-start-line="361" selection-start-column="20" selection-end-line="361" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.6106557">
+          <caret line="363" column="23" selection-start-line="363" selection-start-column="23" selection-end-line="363" selection-end-column="23" />
           <folding />
         </state>
       </provider>
