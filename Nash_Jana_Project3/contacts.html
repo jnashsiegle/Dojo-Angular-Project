@@ -55,7 +55,7 @@
                             {{contact.relation | uppercase}}
                         </td>
                         <td>
-                            <button ng-click = "removeContact(contact)" id = "remove">&times;</button>
+                            <button ng-click = "removeContact($index)" id = "remove">&times;</button>
                             <!--adds remove button -->
                         </td>
                     </tr>
