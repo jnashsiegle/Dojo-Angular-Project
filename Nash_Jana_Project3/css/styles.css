@@ -360,7 +360,7 @@ button{
     cursor: pointer;
 }
 button:disabled {
-    color:  #007007;
+    color:  #303030;
     cursor: not-allowed;
 }
 button.close{
