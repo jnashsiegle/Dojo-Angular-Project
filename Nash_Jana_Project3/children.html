@@ -40,7 +40,7 @@
                         <th>Age</th>
                         <th>Gender</th>
                     </tr>
-                    <tr ng-repeat = "child in children track by $index">
+                    <tr ng-repeat = "child in children | orderBy:'gender' track by $index">
                         <td> {{ child.name }}</td>
                         <td> {{ child.age }}</td>
                         <td> {{ child.gender }}</td>
