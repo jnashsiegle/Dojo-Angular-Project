@@ -91,7 +91,4 @@ myApp.config(function($routeProvider) {
 
 });
 
-function clearBox(gameContainer)
-{
-    document.getElementById(gameContainer).innerHTML = "";
-}
+

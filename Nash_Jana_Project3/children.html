@@ -4,37 +4,42 @@
     <section ng-controller = "ChildController">
 
 
-        <div class="container">
+        <div class="containerNG">
+            <img class = "logo" src = "images/family.png">
+            <header>
             <h2> List of Children to be Cared for </h2>
-            <article>
-                <h4>There are {{ children.length }} children to take care of.</h4>
+
+                <p>There are {{ children.length }} children to take care of.</p>
                 <!--shows the quantity of items in array -->
-            </article>
+            </header>
 
 
-            <form name = "myForm" novalidate>      <!--submit function to add grocery item -->
-                <input type = "text" ng-model = "newChild.name" id = "addChild" placeholder = "Add Child"
-                       required/>
+            <form name = "myForm" id = "childForm" novalidate>      <!--submit function to add grocery item -->
+                <fieldset>
+                    <legend>Add A Child:</legend>
+                        <input type = "text" ng-model = "newChild.name" id = "addChild" placeholder = "Add Child"
+                               required/>
 
-                <input type = "text" ng-model = "newChild.age" id = "childAge" placeholder = "Child's Age"
-                       required/>
+                        <input type = "text" ng-model = "newChild.age" id = "childAge" placeholder = "Child's Age"
+                               required/>
 
-                <label>
-                    <input type="radio" ng-model="newChild.gender" value="male" required />
-                    Male
-                </label>
-                <label>
-                    <input type="radio" ng-model="newChild.gender" value="female" required />
-                    Female
-                </label>
+                        <label>
+                            <input type="radio" ng-model="newChild.gender" value="male" required />
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" ng-model="newChild.gender" value="female" required />
+                            Female
+                        </label>
 
                 <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
                     Form</button>  <!--Reset Form Button / pristine as in untouched  -->
                 <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewChild()" value = "Add Child" ng-disabled="myForm.$invalid">Add Child</button> <!--add new child information to local storage and array -->
+                </fieldset>
             </form>
 
-            <article>
-                <table>
+            <article id = "child">
+                <table >
                     <tr>
                         <th>Child's Name</th>
                         <th>Age</th>

@@ -2,6 +2,8 @@
 FWF - Sivestro
 colors: #1dbfd7 - teal
         #f26522 - orange
+        #92278f - purple
+        #eb0088 - magenta
 */
 
 /* CSS RESET
@@ -39,16 +41,20 @@ html {
     position: relative;
     min-height: 100%;
     box-sizing: border-box;
+    font-size: 62.5%;
 }
-body{
-    margin: 0 0 50px; /* bottom = footer height */
-
-
+body {
+    font: 400 1.3em/1.45 sans-serif;
+    color: #000000;
+    width: 100%;
+    line-height: 1.5;
+    margin: 0 0 50px;
+    background-color: #ffffff;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
-td:after, #remove:after, nav:before, section:after, article:after{
+td::after, #remove::after, nav::before, section::after, article::after{
     content: "";
     display: table;
     clear: both;
@@ -56,37 +62,32 @@ td:after, #remove:after, nav:before, section:after, article:after{
 ol, ul {
     list-style: none;
 }
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-article#contacts{
+
+td{
     width: 50%;
 }
-td{
-    width: 33%;
+th{
+    text-align: left;
+}
+tr {
+    border-bottom: 1px dashed #000000;
+}
+tr:first-of-type{
+    border-bottom: none;
 }
 table {
-    border: 0.125em solid rgba(77,75,77,.5); /* 2/16 */
     border-collapse: collapse;
     border-spacing: 0;
     margin: 1.25em auto; /* 20/16 */
     font-size: 1.5em;
-    color: #555555;
-    width: 100%; /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */ /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */
-    box-shadow: 0.625em 0.625em 3.4375em -0.625em rgba(77,75,77,1); /* 10/16 */ /* 10/16 */ /* 55/16 */ /* 10/16 */
+    color: #000000;
+    width: 100%; /* 10/16 */
+    background-color: transparent;
+    
 }
-tr:nth-child(even) {
-    background: #eeeeee;
+#child{
+    background-color: #92278f;
 }
-tr:nth-child(odd){
-    background: #ffffff;
-}
-
 #remove {
     width: 25%;
     float: right;
@@ -96,13 +97,10 @@ tr:nth-child(odd){
     border: none;
     font-size: 1em;
 }
-
 nav{
     width: 100%;
     height: 3rem;
     background-color: #555555;
-
-
 }
 nav li{
     display: inline;
@@ -113,119 +111,6 @@ nav a {
     padding: 50px;
     line-height: 2.5;
 }
-
-
-/*
-======================================================================
-STRUCTURE
-====================================================================== */
-
-section {
-    width: 85%;
-    margin: 0 auto;
-    padding: 3.125em 1.25em; /* 50/16 */
-    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
-    -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
-    -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
-    border: 0.125em solid grey; /* 2/16 */
-    background: #ffffff;
-    box-shadow: 0.625em 0.625em 3.4375em -0.625em rgba(77, 75, 77, 1); /* 10/16 */
-    border: 2px solid blue;
-}
-section header {
-    margin: 0 auto 2.5em auto; /* 40/16 */
-    padding: 0.9375em; /* 15/16 */
-    text-align: center;
-}
-section header p {
-    color: #cccccc;
-}
-section::after, article::after, h4::before {
-    content: "";
-    display: table;
-    clear: both;
-}
-article {
-    width: 25%;
-    padding: 0.625em; /* 10/16 */
-    border: 1px solid #56595c;
-    float: right;
-    margin-left: 0.625em; /* 10/16 */
-    background-color: #ffffff;
-    border-radius: 5px;
-}
-
-.container {
-    width: 85%;
-    margin: 5% auto 2%;
-    background: url("../images/family.png") no-repeat left;
-    background-size: contain;
-
-
-}
-small.error {
-    padding: 5rem;
-    margin-bottom: 5rem;
-}
-/*
-=====================================================================
-GAME
-=====================================================================*/
-#game {
-    background-color: #1dbfd7;
-}
-section#game p{
-    text-align: center;
-    margin: 0 auto;
-    float: none;
-    width: 100%;
-}
-#gameContainer{
-    text-align: center;
-    float: none;
-    margin: 0 auto;
-    width: 100%;
-}
-
-#gameContainer{
-    width: 75%;
-    float: none;
-    margin: 0 auto;
-    background-color: transparent;
-}
-#gameReset{
-    float: left;
-    margin: 20px;
-    display: block;
-    font-size: 2rem;
-    background-color: green;
-    border-radius: 50%;
-    padding: 10px;
-}
-.gameBtn {
-    font-size: 3rem;
-    border-radius: 50%;
-    padding: 10px;
-    background-color: #f26522;
-    margin-right: 10px;
-}
-/*
-======================================================================
-STYLEGUIDE - Default / Define as Needed
-====================================================================== */
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font: 400 1.3em/1.45 sans-serif;
-    color: #000000;
-    width: 100%;
-    line-height: 1.5;
-    margin: 0 auto;
-    background-color: #ffffff;
-
-}
 /*
 ======================================================================
 TYPOGRAPHY - Define As Needed
@@ -233,21 +118,6 @@ TYPOGRAPHY - Define As Needed
 h1, h2, h3, h4, h5, h6 {
     color: #555555;
     line-height: 1.5;
-}
-.container h1 {
-    text-align: center;
-}
-.container > p {
-    margin-left: 25%;
-}
-.container h1, p{
-    width: 33%;
-    float: right;
-    margin: 10px 100px auto 0;
-}
-#paramBox h1, #paramBox h2{
-    margin: 2% auto;
-    text-align: center;
 }
 h1 {
     font-size: 3.4em;
@@ -276,12 +146,25 @@ h4 {
     text-align: center;
     color: #000000;
 }
+.container h1 {
+    text-align: center;
+}
+.container > p {
+    margin-left: 25%;
+}
+.container h1, p{
+    width: 33%;
+    float: right;
+    margin: 10px 100px auto 0;
+}
+#paramBox h1, #paramBox h2{
+    margin: 2% auto;
+    text-align: center;
+}
+
 h4#count {
     font-size: 2rem;
     color: #000000;
-}
-strong, em {
-    font-weight: 600;
 }
 p {
     font-size: 1.5em;
@@ -293,6 +176,131 @@ p:nth-child(2){
     padding-top: 0;
     padding-bottom: .625em;
 }
+
+
+/*
+======================================================================
+STRUCTURE - Default
+====================================================================== */
+.containerNG header {
+    margin: 15% 0 auto;
+}
+.containerNG header p {
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+}
+.container {
+    width: 85%;
+    margin: 5% auto 2%;
+    background: url("../images/family.png") no-repeat left;
+    background-size: contain;
+}
+.containerNG {
+    background: none;
+}
+.container h1 {
+    text-align: center;
+}
+.container > p {
+    margin-left: 25%;
+}
+.container h1, p{
+    width: 33%;
+    float: right;
+    margin: 10px 100px auto 0;
+}
+section {
+    width: 85%;
+    margin: 0 auto;
+    padding: 3.125em 1.25em; /* 50/16 */
+    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
+    -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
+    -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em; /* 5/16 */
+    background: #ffffff;
+    box-shadow: 0.625em 0.625em 3.4375em -0.625em rgba(77, 75, 77, 1); /* 10/16 */
+    border: 2px solid #79787c ;
+}
+section header {
+    margin: 0 auto 2.5em auto; /* 40/16 */
+    padding: 0.9375em; /* 15/16 */
+    text-align: center;
+}
+section header p {
+    color: #cccccc;
+}
+section::after, article::after, h4::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+article {
+    width: 50%;
+    padding: 0.625em; /* 10/16 */
+    border: 1px solid #79787c;
+    float: right;
+    margin-left: 0.625em; /* 10/16 */
+    margin-right: 3.75em;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+small.error {
+    padding: 5rem;
+    margin-bottom: 5rem;
+}
+.logo {
+    width: 15%;
+    position: absolute;
+    top: 0;
+    margin: 50px auto 50px;
+
+}
+/*
+=====================================================================
+GAME
+=====================================================================*/
+#game {
+    background-color: #1dbfd7;
+}
+section#game p{
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+}
+#gameContainer{
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#gameContainer{
+    width: 75%;
+    float: none;
+    margin: 20px auto;
+    background-color: transparent;
+}
+#gameReset{
+    float: left;
+    margin: 20px;
+    display: block;
+    font-size: 2rem;
+    background-color: green;
+    border-radius: 50%;
+    padding: 10px;
+}
+.gameBtn {
+    font-size: 3rem;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f26522;
+    margin-right: 10px;
+}
+
+/*
+
 /*
 ======================================================================
 IMAGERY
@@ -306,12 +314,21 @@ FORMS
 form{
     display: inline-block;
     width: 33%;
-    border: 1px solid red;
+    border: 1px solid #79787c;
     border-radius: 5px;
     color: #000000;
     background-color: #ffffff;
     float: left;
+    padding-top: 30px;
     margin-bottom: 3.75em; /* 60/16 */
+    margin-left: 3.75em;
+}
+#childForm {
+    background-color: #eb0088;
+}
+legend {
+    font-size: 3rem;
+    margin: 0 30px 20px;
 }
 label{
     display: block;
@@ -370,9 +387,11 @@ button.close{
 }
 /*
 ======================================================================
-#Name of Section
+Contacts.html
 ====================================================================== */
-
+article#contacts{
+    width: 50%;
+}
 /*
 ======================================================================
 #Name of Section
