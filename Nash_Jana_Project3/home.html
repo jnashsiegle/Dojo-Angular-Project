@@ -4,11 +4,18 @@
     <p>This application will help summarize all the information necessary for you to go out and have a nice evening
         while ensuring that your babysitter is fully equipped with the knowledge they would need in order to care
         for your children.</p>
+
+
+        <p>Below is a sample of a simple game available for use when on the go.  </p>
+</section>
+<div id = "paramBox">
+    <h1>The Word of the Day is:</h1>
+    <h2 id = "paramWord">test {{word}}</h2>
+</div>
+<section>
     <article ng-style = "myStyle" id = "game">
-        <p>Here is a sample of a simple game available for use when on the go.  </p>
         <p>Click on any of the buttons below to start the reading/color game. Clear the game with the reset
             button.</p>
-
     <input type="button" value="Red" ng-click="myStyle={background:'red'}" onclick="document.getElementById('Object').innerHTML = 'A is for Apple.  Apples are RED'" />
     <input type="button" value="Green" ng-click="myStyle={background:'green'}" onclick="document.getElementById('Object').innerHTML = 'F is for Frog.  Frogs are GREEN.'" />
     <input type="button" value="Blue"
@@ -23,10 +30,7 @@
     </article>
     <input type="reset" value="Reset" onClick="window.location.reload()">
 
-    <div id = "paramBox">
-        <h3>The Word of the Day is:</h3>
-        <h2 id = "paramWord">test {{word}}</h2>
-    </div>
+
 
 </section>
 

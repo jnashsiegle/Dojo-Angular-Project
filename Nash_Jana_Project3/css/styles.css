@@ -40,11 +40,12 @@ html {
 body{
     margin: 0 0 50px; /* bottom = footer height */
 
+
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
-td:after, #remove:after, nav:before{
+td:after, #remove:after, nav:before, section:after, article:after{
     content: "";
     display: table;
     clear: both;
@@ -131,7 +132,8 @@ section {
 section header {
     margin: 0 auto 2.5em auto; /* 40/16 */
     padding: 0.9375em; /* 15/16 */
-    text-align: center; }
+    text-align: center;
+}
 section header p {
     color: #cccccc;
 }
@@ -148,13 +150,15 @@ article {
     margin-left: 0.625em; /* 10/16 */
     background-color: #ffffff;
     border-radius: 5px;
-
 }
+
 .container {
     width: 85%;
-    margin: 10% auto;
-    background: url("../images/family.png") no-repeat fixed;
-    background-size: cover;
+    margin: 5% auto 2%;
+    background: url("../images/family.png") no-repeat left;
+    background-size: contain;
+
+
 }
 small.error {
     padding: 5rem;
@@ -162,8 +166,8 @@ small.error {
 }
 article#game, article#game h1{
     text-align: center;
-    margin: 0 auto;
-    float: none;
+    margin: 0 50px auto;
+    float: right;
 }
 article#game > p {
     text-align: left;
@@ -200,10 +204,14 @@ h1, h2, h3, h4, h5, h6 {
 .container > p {
     margin-left: 25%;
 }
-h2 {
-    text-transform: uppercase;
+.container h1, p{
+    width: 33%;
+    float: right;
+    margin: 10px 100px auto 0;
+}
+#paramBox h1, #paramBox h2{
+    margin: 2% auto;
     text-align: center;
-    text-shadow: 0.25em 0.25em 0.375em rgba(150, 150, 150, .5); /* 4/16 */ /* 4/16 */ /* 6/16 */
 }
 h1 {
     font-size: 3.4em;
@@ -212,9 +220,12 @@ h1 {
     margin: 2rem 0 4rem 11rem;
 }
 h2 {
-    font-size: 1.6em;
-    color: #000000;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0.25em 0.25em 0.375em rgba(150, 150, 150, .5); /* 4/16 */
+    font-size: 3em;
+    /* 4/16 */
+    /* 6/16 */
 }
 h3{
     font-size: 1.2em;
