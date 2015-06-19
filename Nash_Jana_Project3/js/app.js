@@ -43,7 +43,9 @@ myApp.config(function($routeProvider) {
 
     $scope.addNewChild = function () {       /*function to create new child w/keys; save to LS*/
         dataService.saveChild($scope.newChild.name, $scope.newChild.age, $scope.newChild.gender);
-        $scope.newChild = "";
+        $scope.newChild.name = "";
+        $scope.newChild.age = "";
+        $scope.newChild.gender = "";
     };
 
     $scope.removeChild = function (idx) {           /*call delete function from data service */

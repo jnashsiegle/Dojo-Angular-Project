@@ -77,7 +77,8 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
 
     this.removeContactAt = function(pIndex){   /*function to delete contact information*/
         contactsArray.splice(pIndex,1);         /*run through array, and delete indexed item*/
-        localStorage.setItem("contactsLS", JSON.stringify(contactsArray)); /*set array in a string*/
+        localStorage.setItem("contactsLS", JSON.stringify(contactsArray)); /*set array in a string combined with
+         pre-filled array*/
     };
 
     this.destroyLocalStorage = function(){      /*total clear of all within LS */
