@@ -19,20 +19,23 @@ myApp.config(function($routeProvider) {
             templateUrl:  'children.html',
             controller:  'ChildController'
         })
+        .when('/viewParams/:amazing', {
+            templateUrl: "home.html",
+            controller: 'HomeController'
+        })
         .otherwise({
             redirectTo: '/home'
         });
-});
+})
 
 
-myApp.controller('HomeController', function($scope, $route){
-    $scope.reloadRoute = function() {
-        $window.location.reload();
+.controller("HomeController", function($scope,$routeParams,dataService){
+        $scope.word = $routeParams.amazing;
 
-    }
-});
+ })
 
-myApp.controller("ChildController", function($scope,dataService) { /*connect myApp to ChildController to dataservice*/
+
+.controller("ChildController", function($scope,dataService) { /*connect myApp to ChildController to dataservice*/
 
     $scope.children = dataService.getChildren();
     /*pull child info from dataservice*/
@@ -40,7 +43,7 @@ myApp.controller("ChildController", function($scope,dataService) { /*connect myA
 
     $scope.addNewChild = function () {       /*function to create new child w/keys; save to LS*/
         dataService.saveChild($scope.newChild.name, $scope.newChild.age, $scope.newChild.gender);
-        $scope.newChild = {};
+        $scope.newChild = "";
     };
 
     $scope.removeChild = function (idx) {           /*call delete function from data service */
@@ -56,17 +59,20 @@ myApp.controller("ChildController", function($scope,dataService) { /*connect myA
         if ($scope.myForm) $scope.myForm.$setPristine();
     };
 
-});
-myApp.controller("ContactController", function($scope,dataService) { /*connect myApp to ContactController to
+})
+.controller("ContactController", function($scope,dataService) { /*connect myApp to ContactController to
  dataservice*/
 
     $scope.contacts = dataService.getContact();
-    /*pull contact info from dataservice*/
+    /*pull contact info / array from dataservice*/
     $scope.newContact = {};
 
     $scope.addNewContact = function () {       /*function to create new child w/keys; save to LS*/
         dataService.saveContact($scope.newContact.name, $scope.newContact.phone, $scope.newContact.relation);
-        $scope.newContact = {};
+        $scope.newContact.name = "";
+        $scope.newContact.phone = "";
+        $scope.newContact.relation = "";
+
     };
 
     $scope.removeContact = function (idx) {           /*call delete function from data service */

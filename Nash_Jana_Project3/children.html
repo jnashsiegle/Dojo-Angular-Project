@@ -16,13 +16,8 @@
                 <input type = "text" ng-model = "newChild.name" id = "addChild" placeholder = "Add Child"
                        required/>
 
-                    <div ng-repeat = "child in children"> <!--test -->
-                        {{ newChild.name }}
-                    </div>
-
                 <input type = "text" ng-model = "newChild.age" id = "childAge" placeholder = "Child's Age"
                        required/>
-                    <div ng-repeat = "age in children"> {{newChild.age}}</div> <!--test -->
 
                 <label>
                     <input type="radio" ng-model="newChild.gender" value="male" required />
@@ -33,24 +28,27 @@
                     Female
                 </label>
 
-
                 <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
                     Form</button>  <!--Reset Form Button / pristine as in untouched  -->
                 <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewChild()" value = "Add Child" ng-disabled="myForm.$invalid">Add Child</button> <!--add new child information to local storage and array -->
             </form>
 
-            <p>{{ newChild }}</p>   <!--displays newItem below the input box -->
-
-            <article ng-repeat = "child in children track by $index">
-                <button type = "button" class = "close" aria-hidden = "true"
-                        ng-click = "removeChild($index)">&times;</button> <!---delete employee -->
-                <!--child Name/info -->
-                <span class = "user">&nbsp;</span>
-                <h2>{{ child.name }}</h2>  <!--display name -->
-                <h4> {{child.age }}</h4> <!--display position -->
-                <h4> {{child.gender}}</h4>  <!--display email -->
-
-            </article>
+            <article>
+                <table>
+                    <tr>
+                        <th>Child's Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </tr>
+                    <tr ng-repeat = "child in children track by $index">
+                        <td> {{ child.name }}</td>
+                        <td> {{ child.age }}</td>
+                        <td> {{ child.gender }}</td>
+                        <td> <button type = "button" class = "close" aria-hidden = "true"
+                                     ng-click = "removeChild($index)">&times;</button> <!---delete child --></td>
+                    </tr>
+                </table>
+             </article>
 
 </div>
 </section>

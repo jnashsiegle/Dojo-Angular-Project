@@ -8,59 +8,39 @@
             <h2> Emergency Contacts </h2>
 
 
-            <form name = "myForm" novalidate>      <!--submit function to add grocery item -->
+            <form name = "myForm" novalidate>      <!--submit function to add contact item -->
                 <input type = "text" ng-model = "newContact.name" id = "addContact" placeholder = "Add Contact"
                        required/>
 
-                    <div ng-repeat = "contact in contacts"> <!--test -->
-                        {{ newContact.name }}
-                    </div>
-
                 <input type = "tel" ng-model = "newContact.phone" id = "addPhone" placeholder = "Contact Phone Number"
                        required/>
-                    <div ng-repeat = "phone in contacts"> {{newContact.phone}}</div> <!--test -->
 
                 <input type = "text" ng-model = "newContact.relation" id = "addRelation" placeholder =
-                        "Add Relation"
-                       required/>
-
-                <div ng-repeat = "relation in contacts"> <!--test -->
-                    {{ newContact.relation }}
-                </div>
+                        "Add Relation" required/>
 
 
                 <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
                     Form</button>  <!--Reset Form Button / pristine as in untouched  -->
-                <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewContact()" value = "Add Contact" ng-disabled="myForm.$invalid">Add Contact</button> <!--add new child information to local storage and array -->       <!--save our new item into the array -->
+
+                <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewContact()" value = "Add Contact" ng-disabled="myForm.$invalid">Add Contact</button> <!--add new contact information to local storage and array -->       <!--save our new item into the array -->
             </form>
 
 
             <article id = "contacts">
                 <h4>There are {{ contacts.length }} contacts on your list.</h4>
                 <!--shows the quantity of items in array -->
-
-
-
                 <label for = "search">Search:</label><input type="text" ng-model="title" placeholder =
                     "filter contacts by name or relation..." name = "search" id = "search" />
                 <br/>
                 <table>
-                    <thead>
                     <tr>
-                        <td>
-                            Name
-                        </td>
-                        <td>
-                            Phone
-                        </td>
-                        <td>
-                            Relation
-                        </td>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Relation</th>
                     </tr>
-                    </thead>
                     <tbody>
                     <!--Search our projects list by title contact or status -->
-                    <tr ng-repeat = "contact in contacts | filter:title | orderBy: 'relation'">
+                    <tr ng-repeat = "contact in contacts | filter: title track by $index">
                         <td>
                             {{contact.name}}
                         </td>
@@ -79,12 +59,6 @@
                 </table>
 
 
-
-                        <!--{{$scope.contacts}}-->
-                        <!--table cell displaying actual item with class of ng-binding -->
-
-                    </tr>
-                </table>
             </article>
 
             <a href="#/home"> Back</a>

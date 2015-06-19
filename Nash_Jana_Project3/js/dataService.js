@@ -4,7 +4,18 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
 
     /*++++++++++++++++++++++CHILDREN++++++++++++++++++++++++*/
 
-    var childArray = [];            /*setting var array from LocalStorage */
+    var childArray = [
+        {
+            name: "Julie",
+            age:  "11 years old",
+            gender: "female"
+        },
+        {
+            name: "George",
+            age: "6 months",
+            gender: "male"
+        }
+    ];            /*setting var array from LocalStorage */
 
     this.getChildren = function(){
         var str = localStorage.getItem("childrenLS");
@@ -46,10 +57,9 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
     ];             /*setting var array from LocalStorage */
 
     this.getContact = function(){
-        var conArray = JSON.parse(localStorage.getItem("contactsLS")) || []; /*runs through Local Storage and creates
-         array*/
-        contactsArray = conArray
-        console.log(conArray);
+        var str = localStorage.getItem("contactsLS");
+        contactsArray = JSON.parse(str) || contactsArray;
+        console.log(contactsArray);
         return contactsArray;
     };
 
