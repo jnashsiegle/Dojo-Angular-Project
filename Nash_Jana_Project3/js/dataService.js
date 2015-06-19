@@ -39,6 +39,7 @@ angular.module("myApp").service("dataService", function(){  /*initiating dataser
         localStorage.setItem("childrenLS", JSON.stringify(childArray)); /*set array in a string*/
     };
 
+
     this.destroyLocalStorage = function(){      /*total clear of all within LS */
         childArray.splice(0);                /*splicing back from nothing*/
         localStorage.clear();

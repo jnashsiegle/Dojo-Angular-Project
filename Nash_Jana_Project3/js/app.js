@@ -48,7 +48,7 @@ myApp.config(function($routeProvider) {
         $scope.newChild.gender = "";
     };
 
-    $scope.removeChild = function (idx) {           /*call delete function from data service */
+    $scope.delete = function (idx) {           /*call delete function from data service */
         dataService.removeChildAt(idx);
     };
 
