@@ -4,30 +4,34 @@
     <section ng-app = "myApp" ng-controller = "ContactController">
 
 
-        <div class="container">
-            <h2> Emergency Contacts </h2>
-
+        <div class="containerNG">
+            <img class = "logo" src = "images/family.png">
+            <header>
+                <h2> Emergency Contacts </h2>
+                <p>There are {{ contacts.length }} contacts on your list.</p>
+            </header>
 
             <form name = "myForm" novalidate>      <!--submit function to add contact item -->
-                <input type = "text" ng-model = "newContact.name" id = "addContact" placeholder = "Add Contact"
-                       required/>
+                <fieldset>
+                    <legend>Add A Contact:</legend>
+                        <input type = "text" ng-model = "newContact.name" id = "addContact" placeholder = "Add Contact"
+                               required/>
 
-                <input type = "tel" ng-model = "newContact.phone" id = "addPhone" placeholder = "Contact Phone Number"
-                       required/>
+                        <input type = "tel" ng-model = "newContact.phone"  id = "addPhone" placeholder =                               "Contact Phone Number"/>
 
-                <input type = "text" ng-model = "newContact.relation" id = "addRelation" placeholder =
-                        "Add Relation" required/>
-
+                        <input type = "text" ng-model = "newContact.relation" id = "addRelation" placeholder =
+                                "Add Relation" required/>
 
                 <button type = "button" name = "rstBtn" id = "rstBtn" ng-click = "reset(); myForm.$setPristine()">Reset
                     Form</button>  <!--Reset Form Button / pristine as in untouched  -->
 
                 <button type = "submit" name = "addBtn" id = "addBtn" ng-click = "addNewContact()" value = "Add Contact" ng-disabled="myForm.$invalid">Add Contact</button> <!--add new contact information to local storage and array -->       <!--save our new item into the array -->
+                </fieldset>
             </form>
 
 
             <article id = "contacts">
-                <h4>There are {{ contacts.length }} contacts on your list.</h4>
+
                 <!--shows the quantity of items in array -->
                 <label for = "search">Search:</label><input type="text" ng-model="title" placeholder =
                     "filter contacts by name or relation..." name = "search" id = "search" />
@@ -48,7 +52,7 @@
                             {{contact.phone}}
                         </td>
                         <td>
-                            {{contact.relation}}
+                            {{contact.relation | uppercase}}
                         </td>
                         <td>
                             <button ng-click = "removeContact(contact)" id = "remove">&times;</button>
@@ -61,7 +65,7 @@
 
             </article>
 
-            <a href="#/home"> Back</a>
+
         </div>
 </section>
    

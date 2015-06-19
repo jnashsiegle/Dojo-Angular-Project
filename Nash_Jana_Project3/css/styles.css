@@ -83,7 +83,7 @@ table {
     color: #000000;
     width: 100%; /* 10/16 */
     background-color: transparent;
-    
+
 }
 #child{
     background-color: #92278f;
@@ -317,12 +317,12 @@ form{
     border: 1px solid #79787c;
     border-radius: 5px;
     color: #000000;
-    background-color: #ffffff;
+    background-color: #f26522;
     float: left;
     padding-top: 30px;
     margin-bottom: 3.75em; /* 60/16 */
     margin-left: 3.75em;
-}
+    }
 #childForm {
     background-color: #eb0088;
 }
@@ -351,30 +351,15 @@ input[type="text"].focus, input[type = "email"]:focus, input[type = "email"].foc
     box-shadow: inset 0.0625em 0.0625em 0.125em 0 #c9c9c9; /* 1/16 */ /* 1/16 */ /* 2/16 */
     background-color: #ffffff;
 }
-#submit {
-    background: #8d979e;
-    background-image: -webkit-linear-gradient(top, #8d979e, #56595c);
-    background-image: linear-gradient(to bottom, #8d979e, #56595c); /* 5/16 */ /* 5/16 */
-    border-radius: 0.3125em; /* 5/16 */
-    text-shadow: 0.0625em 0.0625em 0.1875em #666666; /* 1/16 */ /* 1/16 */ /* 3/16 */ /* 0/16 */ /* 1/16 */ /* 3/16 */ /* 0/16 */ /* 1/16 */ /* 3/16 */
-    box-shadow: 0em 0.0625em 0.1875em #666666; /* 0/16 */ /* 1/16 */ /* 3/16 */
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 1.15em; /* 14/16 */
-    padding: 0.4375em 1.25em 0.4375em 1.25em; /* 7/16 */ /* 20/16 */ /* 7/16 */ /* 20/16 */
-    border: solid #1f628d 0.125em; /* 2/16 */
-    text-decoration: none;
-}
-#submit:hover {
-    background: #475157;
-    background-image: -webkit-linear-gradient(top, #475157, #191a1a);
-    background-image: linear-gradient(to bottom, #475157, #191a1a);
-    text-decoration: none;
-}
+
 button{
     margin: 0.625em 0 1.25em 2em; /* 10/16 */ /* 20/16 */ /* 20/16 */
-    font-size: 1.5rem;
+    font-size: 2rem;
+    background-color: red;
     border-radius: 0.3125em; /* 5/16 */
+}
+button:disabled {
+    color:  #5f5f5f;
 }
 button.close{
     float: right;
@@ -391,6 +376,7 @@ Contacts.html
 ====================================================================== */
 article#contacts{
     width: 50%;
+    background-color: #1dbfd7;
 }
 /*
 ======================================================================
