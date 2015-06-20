@@ -4,7 +4,8 @@
     <list default="true" id="06920127-3e71-4910-85f2-6dc937c2dcad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3/js/app.js" afterPath="$PROJECT_DIR$/Nash_Jana_Project3/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3/home.html" afterPath="$PROJECT_DIR$/Nash_Jana_Project3/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css" afterPath="$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nash_Jana_Project3/index.html" afterPath="$PROJECT_DIR$/Nash_Jana_Project3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FWF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.3469388">
+              <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3478261">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -95,13 +106,13 @@
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/instructions.html" />
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/js/param.html" />
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/param.html" />
-        <option value="$PROJECT_DIR$/Nash_Jana_Project3/index.html" />
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/contacts.html" />
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/children.html" />
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/js/dataService.js" />
-        <option value="$PROJECT_DIR$/Nash_Jana_Project3/home.html" />
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css" />
         <option value="$PROJECT_DIR$/Nash_Jana_Project3/js/app.js" />
+        <option value="$PROJECT_DIR$/Nash_Jana_Project3/home.html" />
+        <option value="$PROJECT_DIR$/Nash_Jana_Project3/index.html" />
       </list>
     </option>
   </component>
@@ -794,14 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8979592">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60474306">
@@ -810,18 +813,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/index.html">
+    <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/js/app.js">
+    <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3478261">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nash_Jana_Project3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3469388">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
           <folding />
         </state>
       </provider>

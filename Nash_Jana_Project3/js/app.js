@@ -19,7 +19,7 @@ myApp.config(function($routeProvider) {
             templateUrl:  'children.html',
             controller:  'ChildController'
         })
-        .when('/home/viewParams/:amazing', {
+        .when('/home/viewParams/:Success', {
             templateUrl: "home.html",
             controller: 'HomeController'
         })
@@ -30,7 +30,7 @@ myApp.config(function($routeProvider) {
 
 
 .controller("HomeController", function($scope,$routeParams,dataService){
-        $scope.word = $routeParams.amazing;
+        $scope.word = $routeParams.Success;
 
  })
 
